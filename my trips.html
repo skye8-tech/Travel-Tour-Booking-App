@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour Booking - My Trips</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+
+      <!-- Mobile Menu -->
+      <button class="md:hidden text-gray-600" onclick="toggleMenu()">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 space-y-2">
+      <a href="#" class="block hover:text-blue-600">Home</a>
+      <a href="#" class="block hover:text-blue-600">About Us</a>
+      <a href="#" class="block hover:text-blue-600">Contact Us</a>
+      <button class="w-full mt-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
+        Sign In
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative">
+    <img src="images/hero.png" alt="Hero" class="w-full h-64 md:h-96 object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center text-white px-4">
+      <h2 class="text-3xl md:text-5xl font-bold">Where Plans <span class="text-blue-400">Take Off</span></h2>
+      <p class="mt-4 max-w-2xl">Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+    </div>
+  </section>
+
+  <!-- My Trips Section -->
+  <section class="max-w-6xl mx-auto p-6">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="text-2xl font-bold">My Trips</h3>
+      <button onclick="openAddModal()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        + Add New Tour
+      </button>
+    </div>
+
+    <!-- Trip List -->
+    <div id="tripList" class="space-y-4">
+      <!-- Example Trip -->
+      <div class="trip flex flex-col md:flex-row md:items-center md:justify-between border rounded-lg shadow-sm p-4">
+        <img src="images/sample1.svg" alt="Trip" class="rounded-md w-full md:w-40 h-32 object-cover">
+        <div class="flex-1 px-4 text-sm text-gray-600 mt-3 md:mt-0">
+          <span class="px-2 py-1 bg-green-200 text-green-800 text-xs rounded">past</span>
+          <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.</p>
+        </div>
+        <div class="flex justify-around md:space-x-8 text-center text-sm text-gray-700 mt-3 md:mt-0">
+          <div>
+            <p>Booked on</p>
+            <p class="font-bold text-lg">25 <span class="block uppercase">September</span><span class="text-sm">2025</span></p>
+          </div>
+          <div>
+            <p>Departure</p>
+            <p class="font-bold text-lg">28 <span class="block uppercase">October</span><span class="text-sm">2025</span></p>
+          </div>
+        </div>
+        <div class="flex flex-col items-end space-y-2 mt-3 md:mt-0">
+          <button onclick="openCancelModal(this)" class="text-pink-500 hover:underline">Cancel Tour</button>
+          <button onclick="openRatingModal(this)" class="text-blue-600 hover:underline">Rate Tour</button>
+          <div class="stars flex space-x-1 text-yellow-500 text-lg">
+            <span>★</span><span>★</span><span>★</span><span>☆</span><span>☆</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- Modals (Cancel, Rating, Add Tour) -->
+  <!-- cancel modal -->
+  <div id="cancelModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg p-6 w-80 text-center">
+      <h2 class="text-lg font-semibold mb-4">Cancel this tour?</h2>
+      <p class="mb-4 text-gray-600">Are you sure you want to cancel this booking?</p>
+      <div class="flex justify-end space-x-2">
+        <button onclick="closeCancelModal()" class="px-4 py-2 bg-gray-300 rounded">No</button>
+        <button onclick="confirmCancel()" class="px-4 py-2 bg-pink-500 text-white rounded">Yes, Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- rating modal -->
+  <div id="ratingModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg p-6 w-80 text-center">
+      <h2 class="text-lg font-semibold mb-4">Rate Tour</h2>
+      <div id="ratingStars" class="flex justify-center space-x-2 mb-4">
+        <button onclick="setRating(1)" class="star text-gray-400 text-2xl">★</button>
+        <button onclick="setRating(2)" class="star text-gray-400 text-2xl">★</button>
+        <button onclick="setRating(3)" class="star text-gray-400 text-2xl">★</button>
+        <button onclick="setRating(4)" class="star text-gray-400 text-2xl">★</button>
+        <button onclick="setRating(5)" class="star text-gray-400 text-2xl">★</button>
+      </div>
+      <div class="flex justify-end space-x-2">
+        <button onclick="closeRatingModal()" class="px-4 py-2 bg-gray-300 rounded">Cancel</button>
+        <button onclick="submitRating()" class="px-4 py-2 bg-blue-500 text-white rounded">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- add tour modal -->
+  <div id="addModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg p-6 w-96">
+      <h2 class="text-lg font-semibold mb-4">Add New Tour</h2>
+      <form id="addTourForm" class="space-y-4">
+        <input type="text" id="tourTitle" placeholder="Tour Title" class="w-full border rounded p-2" required>
+        <textarea id="tourDesc" placeholder="Tour Description" class="w-full border rounded p-2" required></textarea>
+        <input type="date" id="bookedDate" class="w-full border rounded p-2" required>
+        <input type="date" id="departDate" class="w-full border rounded p-2" required>
+        <input type="url" id="imageUrl" placeholder="Image URL" class="w-full border rounded p-2" required>
+        <div class="flex justify-end space-x-2">
+          <button type="button" onclick="closeAddModal()" class="px-4 py-2 bg-gray-300 rounded">Cancel</button>
+          <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded">Add Tour</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    let selectedTrip = null;
+    let selectedRating = 0;
+
+    // Mobile Menu
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    }
+
+    // Cancel Tour
+    function openCancelModal(button) {
+      selectedTrip = button.closest(".trip");
+      document.getElementById("cancelModal").classList.remove("hidden");
+    }
+    function closeCancelModal() {
+      document.getElementById("cancelModal").classList.add("hidden");
+      selectedTrip = null;
+    }
+    function confirmCancel() {
+      if (selectedTrip) selectedTrip.remove();
+      closeCancelModal();
+    }
+
+    // Rating
+    function openRatingModal(button) {
+      selectedTrip = button.closest(".trip");
+      selectedRating = 0;
+      document.querySelectorAll("#ratingStars .star").forEach(star => {
+        star.classList.remove("text-yellow-500");
+        star.classList.add("text-gray-400");
+      });
+      document.getElementById("ratingModal").classList.remove("hidden");
+    }
+    function closeRatingModal() {
+      document.getElementById("ratingModal").classList.add("hidden");
+      selectedTrip = null;
+    }
+    function setRating(rating) {
+      selectedRating = rating;
+      document.querySelectorAll("#ratingStars .star").forEach((star, i) => {
+        star.classList.toggle("text-yellow-500", i < rating);
+        star.classList.toggle("text-gray-400", i >= rating);
+      });
+    }
+    function submitRating() {
+      if (selectedTrip && selectedRating > 0) {
+        const starContainer = selectedTrip.querySelector(".stars");
+        starContainer.innerHTML = "";
+        for (let i = 0; i < 5; i++) {
+          starContainer.innerHTML += `<span class="${i < selectedRating ? "text-yellow-500" : "text-gray-400"}">★</span>`;
+        }
+      }
+      closeRatingModal();
+    }
+
+    // Add New Tour
+    function openAddModal() { document.getElementById("addModal").classList.remove("hidden"); }
+    function closeAddModal() { document.getElementById("addModal").classList.add("hidden"); }
+
+    document.getElementById("addTourForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const desc = document.getElementById("tourDesc").value;
+      const booked = new Date(document.getElementById("bookedDate").value);
+      const depart = new Date(document.getElementById("departDate").value);
+      const img = document.getElementById("imageUrl").value;
+
+      const tripHTML = `
+        <div class="trip flex flex-col md:flex-row md:items-center md:justify-between border rounded-lg shadow-sm p-4">
+          <img src="${img}" class="rounded-md w-full md:w-40 h-32 object-cover" />
+          <div class="flex-1 px-4 text-sm text-gray-600 mt-3 md:mt-0">
+            <span class="px-2 py-1 bg-green-200 text-green-800 text-xs rounded">upcoming</span>
+            <p class="mt-2">${desc}</p>
+          </div>
+          <div class="flex justify-around md:space-x-8 text-center text-sm text-gray-700 mt-3 md:mt-0">
+            <div>
+              <p>Booked on</p>
+              <p class="font-bold text-lg">${booked.getDate()} <span class="block uppercase">${booked.toLocaleString('default',{month:'long'})}</span><span class="text-sm">${booked.getFullYear()}</span></p>
+            </div>
+            <div>
+              <p>Departure</p>
+              <p class="font-bold text-lg">${depart.getDate()} <span class="block uppercase">${depart.toLocaleString('default',{month:'long'})}</span><span class="text-sm">${depart.getFullYear()}</span></p>
+            </div>
+          </div>
+          <div class="flex flex-col items-end space-y-2 mt-3 md:mt-0">
+            <button onclick="openCancelModal(this)" class="text-pink-500 hover:underline">Cancel Tour</button>
+            <button onclick="openRatingModal(this)" class="text-blue-600 hover:underline">Rate Tour</button>
+            <div class="stars flex space-x-1 text-yellow-500 text-lg"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById("tripList").insertAdjacentHTML("beforeend", tripHTML);
+      this.reset();
+      closeAddModal();
+    });
+  </script>
+</body>
+</html>

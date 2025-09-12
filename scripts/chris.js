@@ -148,7 +148,7 @@ let travels = [
         title: 'Nso Boyz',
         from: 'Ndop',
         to: 'Banso',
-        description, "With expert knowledge of destinations, personalized service, and a passion for exploration, we simplify travel so you can focus on the joy of discovery. From solo travelers to group expeditions, our mission is to turn your travel dreams into reality—safely, smoothly, and memorably.",
+        description: "With expert knowledge of destinations, personalized service, and a passion for exploration, we simplify travel so you can focus on the joy of discovery. From solo travelers to group expeditions, our mission is to turn your travel dreams into reality—safely, smoothly, and memorably.",
         price: 3000,
         duration: 1,
         ratings:{

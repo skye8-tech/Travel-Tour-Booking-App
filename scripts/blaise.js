@@ -175,111 +175,110 @@ let Tour = [
       "../images/kribi/4.jpeg",
     ],
   },
-    {
-      title: "Lobe Waterfalls",
-      destination: "Lobe Waterfalls, Kribi, South, Cameroon",
-      description:
-        "Witness the unique spectacle of the Lobe Waterfalls, where a powerful cascade plunges directly into the Atlantic Ocean. This natural wonder is a UNESCO World Heritage candidate and offers boat rides, cultural encounters, and stunning views.",
-      price: 25000,
-      ratings: {
-        starcount: 5,
-        reviews: 28,
-      },
-      itinerary: [
-        {
-          day: 1,
-          title: "Waterfall Discovery",
-          activities: [
-            "Boat ride to the falls",
-            "Explore surrounding fishing villages",
-            "Photography at the ocean-falls junction",
-            "Evening seafood feast",
-          ],
-        },
-        {
-          day: 2,
-          title: "Cultural & Adventure Tour",
-          activities: [
-            "Guided storytelling of Lobe legends",
-            "Canoe ride across the river",
-            "Local handicraft shopping",
-            "Depart for onward journey",
-          ],
-        },
-      ],
-      includes: ["boat ride", "guide", "feeding"],
-      duration: {
-        days: 2,
-        hours: "",
-      },
-      images: [
-        "../images/lobe/1.jpg",
-        "../images/lobe/2.jpg",
-        "../images/lobe/3.jpg",
-        "../images/lobe/4.jpg",
-      ],
+  {
+    title: "Lobe Waterfalls",
+    destination: "Lobe Waterfalls, Kribi, South, Cameroon",
+    description:
+      "Witness the unique spectacle of the Lobe Waterfalls, where a powerful cascade plunges directly into the Atlantic Ocean. This natural wonder is a UNESCO World Heritage candidate and offers boat rides, cultural encounters, and stunning views.",
+    price: 25000,
+    ratings: {
+      starcount: 5,
+      reviews: 28,
     },
+    itinerary: [
+      {
+        day: 1,
+        title: "Waterfall Discovery",
+        activities: [
+          "Boat ride to the falls",
+          "Explore surrounding fishing villages",
+          "Photography at the ocean-falls junction",
+          "Evening seafood feast",
+        ],
+      },
+      {
+        day: 2,
+        title: "Cultural & Adventure Tour",
+        activities: [
+          "Guided storytelling of Lobe legends",
+          "Canoe ride across the river",
+          "Local handicraft shopping",
+          "Depart for onward journey",
+        ],
+      },
+    ],
+    includes: ["boat ride", "guide", "feeding"],
+    duration: {
+      days: 2,
+      hours: "",
+    },
+    images: [
+      "../images/lobe/1.jpg",
+      "../images/lobe/2.jpg",
+      "../images/lobe/3.jpg",
+      "../images/lobe/4.jpg",
+    ],
+  },
 
-    {
-      title: "Dja Faunal Reserve (UNESCO site)",
-      destination: "Dja Faunal Reserve, South-East Cameroon",
-      description:
-        "Venture into the Dja Faunal Reserve, a UNESCO World Heritage Site and one of Africa's largest and most intact rainforests. Home to gorillas, chimpanzees, elephants, and over 1,500 plant species, it’s a sanctuary for biodiversity and eco-tourism.",
-      price: 60000,
-      ratings: {
-        starcount: 5,
-        reviews: 35,
-      },
-      itinerary: [
-        {
-          day: 1,
-          title: "Arrival & Forest Entry",
-          activities: [
-            "Arrival in Somalomo (entry point)",
-            "Briefing with conservation guides",
-            "Begin guided trek into the rainforest",
-            "Set up base camp",
-          ],
-        },
-        {
-          day: 2,
-          title: "Wildlife Tracking",
-          activities: [
-            "Track gorillas and chimpanzees",
-            "Birdwatching in the dense forest",
-            "Learn about medicinal plants",
-            "Evening storytelling by local guides",
-          ],
-        },
-        {
-          day: 3,
-          title: "River & Departure",
-          activities: [
-            "Canoe trip along the Dja River",
-            "Photography and relaxation",
-            "Pack up and return to Somalomo",
-            "Depart for onward journey",
-          ],
-        },
-      ],
-      includes: ["park fees", "guides", "camping equipment", "feeding"],
-      duration: {
-        days: 3,
-        hours: "",
-      },
-      images: [
-        "../images/dja/1.jpg",
-        "../images/dja/2.jpg",
-        "../images/dja/3.jpg",
-        "../images/dja/4.jpg",
-      ],
+  {
+    title: "Dja Faunal Reserve (UNESCO site)",
+    destination: "Dja Faunal Reserve, South-East Cameroon",
+    description:
+      "Venture into the Dja Faunal Reserve, a UNESCO World Heritage Site and one of Africa's largest and most intact rainforests. Home to gorillas, chimpanzees, elephants, and over 1,500 plant species, it’s a sanctuary for biodiversity and eco-tourism.",
+    price: 60000,
+    ratings: {
+      starcount: 5,
+      reviews: 35,
     },
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival & Forest Entry",
+        activities: [
+          "Arrival in Somalomo (entry point)",
+          "Briefing with conservation guides",
+          "Begin guided trek into the rainforest",
+          "Set up base camp",
+        ],
+      },
+      {
+        day: 2,
+        title: "Wildlife Tracking",
+        activities: [
+          "Track gorillas and chimpanzees",
+          "Birdwatching in the dense forest",
+          "Learn about medicinal plants",
+          "Evening storytelling by local guides",
+        ],
+      },
+      {
+        day: 3,
+        title: "River & Departure",
+        activities: [
+          "Canoe trip along the Dja River",
+          "Photography and relaxation",
+          "Pack up and return to Somalomo",
+          "Depart for onward journey",
+        ],
+      },
+    ],
+    includes: ["park fees", "guides", "camping equipment", "feeding"],
+    duration: {
+      days: 3,
+      hours: "",
+    },
+    images: [
+      "../images/dja/1.jpg",
+      "../images/dja/2.jpg",
+      "../images/dja/3.jpg",
+      "../images/dja/4.jpg",
+    ],
+  },
 ];
 
-console.log(Tour.length);
 
 // function to render location cards
-function tourCards(Tours) {
+function tourCards(Tour) {
   console.log(Tour);
   let html = "";
   Tour.forEach((Tour) => {

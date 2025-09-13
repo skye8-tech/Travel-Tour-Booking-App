@@ -65,7 +65,8 @@ let Tour = [
             starcount: 4.5,
             reviews: 30
         },
-        itinarary:{
+        itinerary:[
+            {
             day: 1,
             title:'forent Tour',
             activities: [
@@ -73,7 +74,8 @@ let Tour = [
             "Medicinal plant garden",
             "Ornamental flower collections",
             ],
-        },
+        }
+        ],
         includes : ['Np internet', '2 meals'],
         duration:  3,
         images: ['../images/botGarden/0.jpeg',
@@ -94,7 +96,7 @@ let Tour = [
             starcount: 4.0,
             reviews: 60
         },
-        itinerary :
+        itinerary :[
             {
                 day: 1,
                 title: "Parc de la Méfou Wildlife Experience",
@@ -110,7 +112,7 @@ let Tour = [
                 "14:00 – Wrap-up and depart from the park",
                 "15:00 – Return to Yaoundé"
                 ]
-            },
+            }],
             
         includes : ['housing', 'feeding', 'wifi'],
         duration: 3,
@@ -152,9 +154,154 @@ let travels = [
         price: 3000,
         duration: 1,
         ratings:{
-            starCount: 5.0,
+            starCount: 4.0,
             reviews: 101,
         },
         images: ['../images/nsoboyz/0.jpeg', '../images/nsoboyz/1.jpeg', '../images/nsoboyz/2.jpeg', '../images/nsoboyz/3.jpeg', '../images/nsoboyz/4.jpeg']
     },
 ]
+
+function insertDetails(details){
+    let html = `
+        <img src='${details.images[0]}' class="w-70 rounded-2xl md:row-span-2 row-start-2" alt="tor image">
+                <div class="details col-span-2 md:col-start-2 md:col-span-1  grid gap-0.5 ">
+                    <h3 class="font-bold text-2xl">${details.title}</h3>
+                    <div class="minors  ml-3 text-2xs">
+                        <span class="">${details.destination}</span>
+                        <span>| stars here ${details.ratings.starcount} (${details.ratings.reviews})</span>
+                    </div>
+                    <p class="text-2xs">${details.description}</p>
+                </div>
+                <div class="col-start-2 w-full">
+                    <button class="bookbtn relative z-6 px-5 hover:bg-teal-600 py-1 ease-in-out hover:scale-110 transition-all duration-500 bg-teal-500 hover:cursor-pointer rounded-full bg">Book Now</button>
+                    <form action="#" class="bg-gray-300 transition-all ease-in-out duration-100 hidden relative bottom-0 w-80   p-2 text-black group-active:flex flex-col justify-center
+                    items-center-safe gap-2">
+                        <span class="closebtn position absolute transition ease-in duration-500 hover:scale-140 hover:cursor-pointer right-3 top-0 text-2xl text-red-400">x</span>
+                        <h1 class=" font-bold text-center text-2xl">Book This Tour</h1>
+                        <p class="description text-center">
+                            Please ensure all required fields are completed accurately
+                             to help us process your booking smoothly.
+                        </p>
+
+                        <div class="w-full flex flex-col gap-2">
+                            <div class="flex gap-4 bg-white p-2">
+                                <img src="./images/name.svg" alt="">
+                                <input type="text" required placeholder="Name" class="w-full focus:outline-0">
+                            </div>
+                            <div class="flex gap-4 bg-white p-2">
+                                <img src="./images/email.svg" alt="">
+                                <input type="email" required placeholder="Email" class="w-full focus:outline-0">
+                            </div>
+                            <div class="flex gap-4 bg-white p-2">
+                                <img src="./images/phone.svg" alt="">
+                                <input type="phone" required placeholder="Phone" class="w-full focus:outline-0">
+                            </div>
+                            <div class="flex gap-4 bg-white p-2">
+                                <img src="./images/email.svg" alt="">
+                                <input type="number" required placeholder="Number of persons" min="1" class="w-full focus:outline-0">
+                            </div>
+                            <div class="flex gap-4 bg-white p-2">
+                                <img src="./images/date.svg" alt="">
+                                <input type="date" required placeholder="date" class="w-full focus:outline-0">
+                            </div>
+
+                            <button type="submit" class="text-white mx-auto px-4 py-1 rounded-2xl w-2/4 hover:scale-90 ease-in-out hover:bg-orange-600 transition-all duration-500 bg-orange-500"> Confirm</button>
+                            
+                        </div>
+                    </form>
+                </div>
+    `
+    const detailsElem =document.getElementById('details')
+    detailsElem.innerHTML = html
+}
+
+function insertItinarery(details){
+    let acumulator = ''
+    details.itinerary.forEach((day,idx)=>{
+        const listTOdo = ()=>{
+            let acc = ''
+            day.activities.forEach(activity=>{
+                acc +=`<ul class="text-red-500 ml-5 text-sm p-0 m-0 list-decimal">${activity}</ul>`
+            }
+            )
+            return acc
+        }
+        let html = `
+            <div>
+                <h1 class="font-medium text-lg p-0 m-0">Day ${day.day}:  ${day.title}</h1>
+                ${listTOdo()}
+            </div>
+    `
+    acumulator+=html
+    })
+    let itinareryarea = document.getElementById('itinerary')
+    itinareryarea.innerHTML = acumulator
+}
+
+function insertsGalery(details){
+    let html = ''
+    details.images.forEach(image=>{
+        html+= `<img src="${image}" alt="" class= "w-full h-50"></img>`
+    })
+
+    let galleryElem = document.getElementById('gallery')
+    galleryElem.innerHTML = html
+}
+
+function insertFooter(){
+    let FooterElem = document.getElementById('footer')
+    console.log(FooterElem)
+    FooterElem.innerHTML = `
+    <div class="grid grid-flow-col grid-row-4 bg-white gap-4 font-light mt-32">
+        <div >
+                <h1 class="font-bold ml-4">Follow us</h1>
+                <i class="fa-brands fa-facebook"></i>
+                 <i class="fa-solid fa-xmark"></i>
+                <i class="fa-brands fa-instagram"></i>
+             </div>
+             <div>
+            <ul>
+                <h1 class="font-bold">international flights</h1>
+                <li><a href="">international flights</a></li>
+                
+          </ul>
+             </div>
+             <div>
+                <h1 class="font-bold">Company</h1>
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Term & Condition</a></li>
+                    <li><a href="">Privacu policy</a></li>
+                    <li><a href="">Booking Rules</a></li>
+                </ul>
+             </div>
+             <div>
+                <h1 class="font-bold">Address</h1>
+                <i class="fa-solid fa-location-dot font-light"></i>
+                Korem ipsum sit amet, consectetur<br>
+                adipisci dolor sit amet, cong elit
+                <h1 class="font-bold">Phone</h1>
+                <ul>
+                    
+                    <li> <i class="fa-solid fa-mobile"></i>01-4821579</li>
+                    <li><i class="fa-solid fa-mobile"></i>(+237) 673639542</li>
+                </ul>
+                <h1 class="font-bold mt-4">CHAT WITH US ON</h1>
+                <span> <i class="fa-brands fa-viber "></i>Viber</span><br>
+                <span><i class="fa-brands fa-whatsapp"></i>Whats App</span>
+                <h1 class="font-bold">Mail</h1>
+                <span><i class="fa-solid fa-envelope"></i>thuk@thuktravels.com</span>
+             </div>
+            </div>
+    `
+}
+
+function renderPage(Tour){
+    insertDetails(Tour)
+    insertsGalery(Tour)
+    insertItinarery(Tour)
+}
+insertFooter()
+
+renderPage(Tour[0])

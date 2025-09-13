@@ -150,3 +150,5 @@ startAutoplay();
 window.addEventListener("load", () => {
   document.querySelector(".fade-in-up").style.opacity = "1";
 });
+
+

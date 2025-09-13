@@ -180,19 +180,23 @@ let travels = [
   },
 ];
 
-function insertDetails(details) {
-  let html = `
-        <img src='${details.images[0]}' class="w-70 rounded-2xl md:row-span-2 row-start-2" alt="tor image">
+function insertDetails(details){
+    let html = `
+        <img src='${details.images[0]}' class="w-70 rounded-full " alt="tor image">
                 <div class="details col-span-2 md:col-start-2 md:col-span-1  grid gap-0.5 ">
                     <h3 class="font-bold text-2xl">${details.title}</h3>
                     <div class="minors  ml-3 text-2xs">
                         <span class="">${details.destination}</span>
-                        <span>| stars here ${details.ratings.starcount} (${details.ratings.reviews})</span>
+                        <span> <span class="">⭐⭐⭐⭐⭐</span>|  ${details.ratings.starcount} (${details.ratings.reviews})</span>
                     </div>
                     <p class="text-2xs">${details.description}</p>
                 </div>
-                <div class="col-start-2 w-full">
+                <div class="md:col-start-2 col-span-2 w-full">
+                    <div class="flex gap-2">
+                    <p class="font-bold text-black text-2xl">${details.price} frs</p>
                     <button class="bookbtn relative z-6 px-5 hover:bg-teal-600 py-1 ease-in-out hover:scale-110 transition-all duration-500 bg-teal-500 hover:cursor-pointer rounded-full bg">Book Now</button>
+                    <span class= "">share</span>
+                    </div>
                     <form action="#" class="bg-gray-300 transition-all ease-in-out duration-100 hidden relative bottom-0 w-80   p-2 text-black group-active:flex flex-col justify-center
                     items-center-safe gap-2">
                         <span class="closebtn position absolute transition ease-in duration-500 hover:scale-140 hover:cursor-pointer right-3 top-0 text-2xl text-red-400">x</span>

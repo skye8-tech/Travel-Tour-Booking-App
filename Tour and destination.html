@@ -8,9 +8,16 @@
     </head>
     <body background
         class="flex flex-col gap-10 items-cente mx-2 md:mx-20  min-h-screen ">
+    <body background="" class="flex flex-col gap-10 items-cente  min-h-screen ">
         <section class="relative h-dvh ">
             <div>
                 <img src="./images/hero.png" class="w-full h-120" alt>
+            <div class="flex bg-[url('/images/hero.png')] bg-cover bg-center w-full h-120">
+                <div class="absolute text-black flex flex-col my-50  justify-center w-full items-center text-center px-4">
+                    <h2 class="text-3xl md:text-5xl font-bold">Where Plans <span class="text-blue-400">Take Off</span></h2>
+                    <p class="mt-4 max-w-2xl">Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+                </div>
+                
             </div>
             <div
                 class="grid gap-3 mt-5 grid-cols-1 md:grid-cols-2 items-center
@@ -23,7 +30,7 @@
                     class="details col-span-2 md:col-start-2 md:col-span-1  grid gap-0.5 ">
                     <h3 class="font-bold text-2xl">Wildlife Of Alaska</h3>
                     <div class="minors  ml-3 text-2xs">
-                        <span>Alaska, Usa</span>
+                        <span class="">Alaska, Usa</span>
                         <span>| stars here 4.9 (300 reviews)</span>
                     </div>
                     <p class="text-2xs">description here Amet minim mollit non
@@ -32,14 +39,17 @@
                         Velit officia consequat duis enim velit mollit.
                         Exercitation veniam consequat sunt nostrud amet.</p>
                 </div>
+                <div class="col-start-2 w-full">
+                    <button class="bookbtn relative z-6 px-5 hover:bg-teal-600 py-1 ease-in-out hover:scale-110 transition-all duration-500 bg-teal-500 hover:cursor-pointer rounded-full bg">Book Now</button>
+                    <form action="#" class="bg-gray-300 transition-all ease-in-out duration-100 hidden relative bottom-0 w-80   p-2 text-black group-active:flex flex-col justify-center
                 <div class="group col-start-2 w-full">
                     <button class="px-5 py-1 bg-teal-500 rounded-full bg">Book
                         Now</button>
                     <form action="#"
                         class="bg-gray-300 hidden w-80 absolute p-2 text-black group-active:flex flex-col justify-center
                     items-center-safe gap-2">
-
-                        <h1 class=" font-bold text-2xl">Book This Tour</h1>
+                        <span class="closebtn position absolute transition ease-in duration-500 hover:scale-140 hover:cursor-pointer right-3 top-0 text-2xl text-red-400">x</span>
+                        <h1 class=" font-bold text-center text-2xl">Book This Tour</h1>
                         <p class="description text-center">
                             Please ensure all required fields are completed
                             accurately
@@ -48,32 +58,44 @@
 
                         <div class="w-full flex flex-col gap-2">
                             <div class="flex gap-4 bg-white p-2">
+                                <img src="./images/name.svg" alt="">
+                                <input type="text" required placeholder="Name" class="w-full focus:outline-0">
                                 <img src="./images/name.svg" alt>
                                 <input type="text" required placeholder="Name"
                                     class="focus:outline-0">
                             </div>
                             <div class="flex gap-4 bg-white p-2">
+                                <img src="./images/email.svg" alt="">
+                                <input type="email" required placeholder="Email" class="w-full focus:outline-0">
                                 <img src="./images/email.svg" alt>
                                 <input type="email" required placeholder="Email"
                                     class="focus:outline-0">
                             </div>
                             <div class="flex gap-4 bg-white p-2">
+                                <img src="./images/phone.svg" alt="">
+                                <input type="phone" required placeholder="Phone" class="w-full focus:outline-0">
                                 <img src="./images/phone.svg" alt>
                                 <input type="phone" required placeholder="Phone"
                                     class="focus:outline-0">
                             </div>
                             <div class="flex gap-4 bg-white p-2">
+                                <img src="./images/email.svg" alt="">
+                                <input type="number" required placeholder="Number of persons" min="1" class="w-full focus:outline-0">
                                 <img src="./images/email.svg" alt>
                                 <input type="number" required
                                     placeholder="Number of persons" min="1"
                                     class="focus:outline-0">
                             </div>
                             <div class="flex gap-4 bg-white p-2">
+                                <img src="./images/date.svg" alt="">
+                                <input type="date" required placeholder="date" class="w-full focus:outline-0">
                                 <img src="./images/date.svg" alt>
                                 <input type="date" required placeholder="date"
                                     class="focus:outline-0">
                             </div>
 
+                            <button type="submit" class="text-white mx-auto px-4 py-1 rounded-2xl w-2/4 hover:scale-90 ease-in-out hover:bg-orange-600 transition-all duration-500 bg-orange-500"> Confirm</button>
+                            
                             <button type="submit"
                                 class="text-white mx-auto px-4 py-1 rounded-2xl w-2/4 bg-orange-500">
                                 Confirm</button>
@@ -84,6 +106,59 @@
             </div>
 
         </section>
+        <main class="flex flex-col gap-10 items-cente mx-2 md:mx-20">
+            <section id=" grid itinerary">
+                <h1 class="font-bold text-2xl">Itinerary</h1>
+                <div class="flex flex-col gap-2">
+                    <div>
+                        <h1 class="font-medium text-sm p-0 m-0">day1: Arrival in Manaus and Amazon River Cruise</h1>
+                        <span class="text-red-500 ml-5 text-xs p-0 m-0">Arive in manaus tranfere your river riviver 
+                            cruise, and enjoy a scenic journey the amazon river
+                        </span>
+                    </div>
+                    <div>
+                        <h1 class="font-medium text-sm p-0 m-0">day1: Arrival in Manaus and Amazon River Cruise</h1>
+                        <span class="text-red-500 ml-5 text-xs p-0 m-0">Arive in manaus tranfere your river riviver 
+                            cruise, and enjoy a scenic journey the amazon river
+                        </span>
+                    </div>
+                    <div>
+                        <h1 class="font-medium text-sm p-0 m-0">day1: Arrival in Manaus and Amazon River Cruise</h1>
+                        <span class="text-red-500 ml-5 text-xs p-0 m-0">Arive in manaus tranfere your river riviver 
+                            cruise, and enjoy a scenic journey the amazon river
+                        </span>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="galery flex flex-col gap-5">
+                <h1 class="font-bold text-3xl text-left">Galery</h1>
+                <div class="grid w-3/4 gap-15 mx-auto  grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
+                    <img src="./images//sample1.svg" alt="">
+                    <img src="./images//sample1.svg" alt="">
+                    <img src="./images//sample1.svg" alt="">
+                    <img src="./images//sample1.svg" alt="">
+                    <img src="./images//sample1.svg" alt="">
+                    <img src="./images//sample1.svg" alt="">
+                </div>
+            </section>
+        </main>
+
+        <script>
+          let formElem =  document.querySelector('form')
+          function popUp(){
+              formElem.style.display = 'grid'
+            }
+
+        function closeTour(){
+            formElem.style.display = 'none'
+        }
+
+        let btn =document.querySelector('.bookbtn')
+        btn.addEventListener('click', ()=>popUp())
+        document.querySelector('.closebtn').addEventListener('click',()=> closeTour())
+        
+        </script>
 
         <section id="grid itinerary">
             <h1 class="font-bold text-2xl">Itinerary</h1>

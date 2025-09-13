@@ -1,0 +1,28 @@
+ /* Fade-in animation */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    /* Floating blobs */
+    @keyframes float {
+      0% { transform: translateY(0px) translateX(0px) scale(1); }
+      50% { transform: translateY(-15px) translateX(10px) scale(1.05); }
+      100% { transform: translateY(0px) translateX(0px) scale(1); }
+    }
+    .float-blob {
+      animation: float 6s ease-in-out infinite;
+    }
+    .float-blob-delayed {
+      animation: float 7s ease-in-out infinite;
+      animation-delay: 2s;
+    }

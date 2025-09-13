@@ -5,143 +5,235 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Homepage</title>
         <link rel="stylesheet" href="/src/output.css">
+        <link rel="stylesheet" href="/src/global.css">
     </head>
-    <body class="bg-sky-100">
-        <!-- gallery section -->
-        <section class="my-10 mx-8">
-            <div>
-
-            </div>
-            <h2 class="text-2xl font-bold text-center">Explore Popular
-                Destination</h2>
-            <p class="text-sm text-gray-600 text-center text-wrap mb-8">Lorem
-                ipsum dolor sit amet, consectetur adipisicing elit. Nisi, br
-                commodi ullam. Molestias, nemo. </p>
+    <body class="bg-sky-100  min-h-screen">
+        <header
+            class="relative h-screen bg-[url('/images/hero.png')] bg-cover bg-center ">
+            <!-- Hero Content -->
             <div
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    Where Plans <span class="text-green-400">Take Off</span>
+                </h1>
+                <p class="max-w-2xl mb-10">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nunc vulputate
+                    libero et velit interdum, ac aliquet odio mattis. Class
+                    aptent taciti.
+                </p>
+
                 <div
-                    class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                    class="max-w-6xl mx-auto">
+                    <!-- Tabs -->
+                    <div class="flex">
+                        <button
+                            class="px-6 py-3 font-semibold bg-gray-100 text-gray-700">One-Way</button>
+                        <button
+                            class="px-6 py-3 font-semibold bg-teal-600 text-white">Round-Trip</button>
+                    </div>
+
+                    <!-- Form Grid -->
                     <div
-                        class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
-                    <div
-                        class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
-                    <div
-                        class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="text-white font-semibold text-lg">Adamawa</span>
+                        class="bg-white grid grid-cols-1 md:grid-cols-5 divide-x divide-gray-200">
+
+                        <!-- Origin -->
+                        <div class="flex flex-col px-4 py-3">
+                            <label
+                                class="text-sm font-medium text-gray-700">From</label>
+                            <div class="flex items-center text-gray-500 mt-1">
+                                <span class="mr-2">✈️</span>
+                                <input type="text" placeholder="Origin..."
+                                    class="focus:outline-none w-full text-sm placeholder-gray-400">
+                            </div>
+                        </div>
+
+                        <!-- Destination -->
+                        <div class="flex flex-col px-4 py-3">
+                            <label
+                                class="text-sm font-medium text-gray-700">To</label>
+                            <div class="flex items-center text-gray-500 mt-1">
+                                <span class="mr-2">🛬</span>
+                                <input type="text" placeholder="Destination..."
+                                    class="focus:outline-none w-full text-sm placeholder-gray-400">
+                            </div>
+                        </div>
+
+                        <!-- Departure -->
+                        <div class="flex flex-col px-4 py-3">
+                            <label
+                                class="text-sm font-medium text-gray-700">Departure</label>
+                            <div class="flex items-center text-gray-500 mt-1">
+                                <span class="mr-2">📅</span>
+                                <input type="date"
+                                    class="focus:outline-none w-full text-sm text-gray-500">
+                            </div>
+                        </div>
+
+                        <!-- Passenger -->
+                        <div class="flex flex-col px-4 py-3">
+                            <label
+                                class="text-sm font-medium text-gray-700">Passenger</label>
+                            <div class="flex items-center text-gray-500 mt-1">
+                                <span class="mr-2">🧍</span>
+                                <input type="text"
+                                    placeholder="Traveller(s), Class"
+                                    class="focus:outline-none w-full text-sm placeholder-gray-400">
+                            </div>
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="flex justify-center items-center">
+                            <button
+                                class="w-full h-full bg-teal-600 hover:bg-teal-700 text-white font-semibold text-lg">
+                                Search Flight
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div
-                    class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
-                    <div
-                        class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
-                    <div
-                        class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
-                    <div
-                        class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="text-white font-semibold text-lg">Adamawa</span>
-                    </div>
+
+            </header>
+            <!-- gallery section -->
+            <section class="my-10 mx-8">
+                <div>
+
                 </div>
+                <h2 class="text-2xl font-bold text-center">Explore Popular
+                    Destination</h2>
+                <p
+                    class="text-sm text-gray-600 text-center text-wrap mb-8">Lorem
+                    ipsum dolor sit amet, consectetur adipisicing elit. Nisi, br
+                    commodi ullam. Molestias, nemo. </p>
                 <div
-                    class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                     <div
-                        class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
-                    <div
-                        class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
-                    <div
-                        class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="text-white font-semibold text-lg">Adamawa</span>
+                        class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-[url('/images/Lamido-palace.jpg')] bg-cover bg-center"></div>
+                        <div
+                            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="text-white font-semibold text-lg">Adamawa</span>
+
+                        </div>
+
                     </div>
-                </div>
-                <div
-                    class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
                     <div
-                        class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
-                    <div
-                        class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
-                    <div
-                        class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="text-white font-semibold text-lg">Adamawa</span>
+                        class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-[url('/images/Reunification-Monument.jpg')] bg-cover bg-center"></div>
+                        <div
+                            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="text-white font-semibold text-lg">Centre</span>
+                        </div>
                     </div>
-                </div>
-                <div
-                    class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
                     <div
-                        class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
-                    <div
-                        class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
-                    <div
-                        class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="text-white font-semibold text-lg">Adamawa</span>
+                        class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-[url('/images/Menchum-falls.jpg')] bg-cover bg-center"></div>
+                        <div
+                            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="text-white font-semibold text-lg">Northwest</span>
+                        </div>
                     </div>
-                </div>
-                <div
-                    class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
                     <div
-                        class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
-                    <div
-                        class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
-                    <div
-                        class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="text-white font-semibold text-lg">Adamawa</span>
+                        class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
+                        <div
+                            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="text-white font-semibold text-lg">East</span>
+                        </div>
                     </div>
-                </div>
-                <div
-                    class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
                     <div
-                        class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
-                    <div
-                        class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
-                    <div
-                        class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="text-white font-semibold text-lg">Adamawa</span>
+                        class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
+                        <div
+                            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="text-white font-semibold text-lg">Far
+                                North</span>
+                        </div>
                     </div>
-                </div>
-                <div
-                    class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
                     <div
-                        class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
-                    <div
-                        class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
-                    <div
-                        class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="text-white font-semibold text-lg">Adamawa</span>
+                        class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
+                        <div
+                            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="text-white font-semibold text-lg">Littoral</span>
+                        </div>
                     </div>
-                </div>
-                <div
-                    class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
                     <div
-                        class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
-                    <div
-                        class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
-                    <div
-                        class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="text-white font-semibold text-lg">Adamawa</span>
+                        class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
+                        <div
+                            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="text-white font-semibold text-lg">North</span>
+                        </div>
                     </div>
-                </div>
-                <div
-                    class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
                     <div
-                        class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
+                        class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-[url('/images/face.png')] bg-cover bg-center"></div>
+                        <div
+                            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="text-white font-semibold text-lg">South</span>
+                        </div>
+                    </div>
                     <div
-                        class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+                        class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-[url('/images/Mount-cameroon.jpg')] bg-cover bg-center"></div>
+                        <div
+                            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="text-white font-semibold text-lg">Southwest</span>
+                        </div>
+                    </div>
                     <div
-                        class="absolute inset-0 flex items-center justify-center">
-                        <span
-                            class="text-white font-semibold text-lg">Adamawa</span>
+                        class="relative h-32 md:h-40 rounded-lg overflow-hidden group">
+                        <div
+                            class="absolute inset-0 bg-[url('/images/Foumban-palace.jpg')] bg-cover bg-center"></div>
+                        <div
+                            class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition"></div>
+                        <div
+                            class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="text-white font-semibold text-lg">West</span>
+                        </div>
                     </div>
                 </div>
             </section>
+
             <!-- location display cards -->
-            <section class="mx-15 ">
+            <section class="w-[95%] max-w-7xl mx-8 mb-6">
                 <div>
                     <h2 class="text-2xl font-bold">Stay At Our Top unique
                         Properties</h2>
@@ -149,23 +241,235 @@
                         Villas To
                         Boats And Igloos, We Have It All</p>
                 </div>
-                <!-- coroseol -->
+
+                <!-- Carousel Container -->
+                <div class="relative overflow-hidden">
+                    <div id="carousel"
+                        class="flex transition-transform duration-500 ease-in-out">
+
+                        <!-- Carousel Items -->
+                        <!--    <div
+                        class="min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] bg-white rounded-xl shadow-md overflow-hidden mx-2">
+                        <img class="h-48 w-full object-cover"
+                            src="/images/Lamido-palace.jpg" alt>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg"> Lamido
+                                palace</h3>
+                             Location --
+                            <div
+                                class="flex items-center text-gray-500 text-sm">
+                                <!-- Location Icon --
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-4 h-4 mr-1 text-yellow-500"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.05 3.05a7 7 0 019.9 9.9L10 18.9l-4.95-5.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Adamawa, Village
+                            </div>
+                            <div class="flex items-center my-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-gray-600 text-sm ml-2">584
+                                    reviews</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p
+                                    class="text-lg font-bold text-yellow-500">$35.00
+                                    <br>
+                                    <span
+                                        class="text-sm font-normal text-gray-500">per
+                                        person</span>
+                                </p>
+                                <a href="#"
+                                    class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] bg-white rounded-xl shadow-md overflow-hidden mx-2">
+                        <img class="h-48 w-full object-cover"
+                            src="/images/Foumban-palace.jpg"
+                            alt>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg">Foumban
+                                palace</h3>
+                            <!-- Location --
+                            <div
+                                class="flex items-center text-gray-500 text-sm">
+                                <!-- Location Icon --
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-4 h-4 mr-1 text-yellow-500"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.05 3.05a7 7 0 019.9 9.9L10 18.9l-4.95-5.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                West, Foumban
+                            </div>
+                            <div class="flex items-center my-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-gray-600 text-sm ml-2">584
+                                    reviews</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p
+                                    class="text-lg font-bold text-yellow-500">$35.00
+                                    <br>
+                                    <span
+                                        class="text-sm font-normal text-gray-500">per
+                                        person</span>
+                                </p>
+                                <a href="#"
+                                    class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] bg-white rounded-xl shadow-md overflow-hidden mx-2">
+                        <img class="h-48 w-full object-cover"
+                            src="/images/Reunification-Monument.jpg"
+                            alt>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg">Reunification
+                                Monument</h3>
+                            <!-- Location --
+                            <div
+                                class="flex items-center text-gray-500 text-sm">
+                                <!-- Location Icon --
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-4 h-4 mr-1 text-yellow-500"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.05 3.05a7 7 0 019.9 9.9L10 18.9l-4.95-5.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Centre, Square
+                            </div>
+                            <div class="flex items-center my-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-gray-600 text-sm ml-2">584
+                                    reviews</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p
+                                    class="text-lg font-bold text-yellow-500">$35.00
+                                    <br>
+                                    <span
+                                        class="text-sm font-normal text-gray-500">per
+                                        person</span>
+                                </p>
+                                <a href="#"
+                                    class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] bg-white rounded-xl shadow-md overflow-hidden mx-2">
+                        <img class="h-48 w-full object-cover"
+                            src="/images/Menchum-falls.jpg"
+                            alt>
+                        <div class="p-4">
+                            <h3 class="font-semibold text-lg">Menchum-falls</h3>
+                            <!-- Location --
+                            <div
+                                class="flex items-center text-gray-500 text-sm">
+                                <!-- Location Icon --
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-4 h-4 mr-1 text-yellow-500"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M5.05 3.05a7 7 0 019.9 9.9L10 18.9l-4.95-5.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Northwest, Menchum
+                            </div>
+                            <div class="flex items-center my-2">
+                                <span class="text-yellow-400">★★★★★</span>
+                                <span class="text-gray-600 text-sm ml-2">584
+                                    reviews</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p
+                                    class="text-lg font-bold text-yellow-500">$35.00
+                                    <br>
+                                    <span
+                                        class="text-sm font-normal text-gray-500">per
+                                        person</span>
+                                </p>
+                                <a href="#"
+                                    class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">
+                                    Book Now
+                                </a>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <button id="prev"
+                        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-200">
+                        ⬅
+                    </button>
+                    <button id="next"
+                        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-gray-200">
+                        ➡
+                    </button>
+                </div>
+                <!-- Dots -->
+                <div id="dots"
+                    class="flex justify-center mt-4 space-x-2"></div>
+            </section>
+
+            <section class="mx-10 my-10">
                 <div
-                    class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Card -->
+                    class="flex flex-col md:flex-row items-center bg-teal-600 backdrop-blur-md rounded-2xl shadow-2xl w-full p-6 opacity-0 fade-in-up">
+
+                    <!-- Image Section -->
                     <div
-                        class=" bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <!-- Image -->
-                        <img src="/images/face.png"
-                            alt="Nirvana Lounge"
-                            class="w-full h-56 object-cover">
-                        <!-- Card Content -->
-                        <div class="p-5 space-y-3">
-                            <!-- Title -->
-                            <h2
-                                class="text-xl font-semibold text-gray-800">Nirvana
-                                Lounge</h2>
-                            <!-- Location -->
+                        class="relative w-full md:w-1/2 flex justify-center items-center mb-6 md:mb-0">
+                        <div
+                            class="relative w-56 h-56 md:w-64 md:h-64 transition-transform duration-500 hover:scale-105">
+                            <!-- Floating blob background shapes -->
+                            <div
+                                class="absolute inset-0 rounded-full bg-yellow-300 -z-10 translate-x-4 translate-y-4 float-blob"></div>
+                            <div
+                                class="absolute inset-0 rounded-full bg-blue-300 -z-10 -translate-x-6 -translate-y-6 float-blob-delayed"></div>
+                            <img
+                                src="/images/face.png"
+                                alt="Alaska"
+                                class="rounded-full object-cover w-full h-full shadow-xl">
+                        </div>
+                    </div>
+
+                    <!-- Text Section -->
+                    <div
+                        class="w-full md:w-1/2 md:pl-8 text-white text-center md:text-left transition-all duration-700">
+                        <span
+                            class="bg-orange-500 text-xs font-semibold px-3 py-1 rounded-full animate-bounce">TRENDING
+                            NOW</span>
+                        <h2
+                            class="text-2xl md:text-3xl font-bold mt-3">Wilderlife
+                            of
+                            Alaska</h2>
+
+                        <!-- Location & Rating -->
+                        <div
+                            class="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start text-sm text-gray-200 mt-2 gap-2">
                             <div
                                 class="flex items-center text-gray-500 text-sm">
                                 <!-- Location Icon -->
@@ -177,187 +481,50 @@
                                         d="M5.05 3.05a7 7 0 019.9 9.9L10 18.9l-4.95-5.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                Kathmandu, Nepal
+                                <span class="text-white">Alaska, USA</span>
                             </div>
-                            <!-- Rating -->
-                            <div class="flex items-center text-sm">
-                                <!-- Stars -->
-                                <div class="flex text-yellow-400 mr-2">
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg
-                                        class="w-4 h-4 fill-current text-gray-300"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                </div>
-                                <span class="text-gray-600">584 reviews</span>
-                            </div>
-                            <!-- Price + Button -->
-                            <div class="flex items-center justify-between">
-                                <p
-                                    class="text-lg font-bold text-yellow-500">$35.00
-                                    <br>
-                                    <span
-                                        class="text-sm font-normal text-gray-500">per
-                                        person</span>
-                                </p>
-                                <button
-                                    class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">
-                                    Book Now
-                                </button>
-                            </div>
+
+                            <span class="flex items-center md:ml-4">
+                                ⭐⭐⭐⭐⭐
+                                <span class="ml-2 font-medium">4.9</span>
+                                <span class="ml-1 text-gray-300">(300
+                                    reviews)</span>
+                            </span>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="mt-4 text-gray-200 leading-relaxed">
+                            Amet minim mollit non deserunt ullamco est sit
+                            aliqua
+                            dolor
+                            do amet sint.
+                            Velit officia consequat duis enim velit mollit.
+                            Exercitation
+                            veniam consequat sunt nostrud amet.
+                        </p>
+
+                        <!-- Buttons -->
+                        <div
+                            class="flex items-center justify-center md:justify-start gap-4 mt-6">
+                            <button
+                                class="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl shadow-lg transform transition duration-300 hover:scale-110 hover:shadow-green-400/50">
+                                Book Now
+                            </button>
+                            <button
+                                class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full hover:bg-white/30 transform transition-transform duration-300 hover:scale-110">
+                                ❤
+                            </button>
+                            <button
+                                class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full hover:bg-white/30 transform transition-transform duration-300 hover:scale-110">
+                                ➤
+                            </button>
                         </div>
                     </div>
-
-                    <!-- Card -->
-                    <div
-                        class=" bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <!-- Image -->
-                        <img src="/images/face.png"
-                            alt="Nirvana Lounge"
-                            class="w-full h-56 object-cover">
-                        <!-- Card Content -->
-                        <div class="p-5 space-y-3">
-                            <!-- Title -->
-                            <h2
-                                class="text-xl font-semibold text-gray-800">Nirvana
-                                Lounge</h2>
-                            <!-- Location -->
-                            <div
-                                class="flex items-center text-gray-500 text-sm">
-                                <!-- Location Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-4 h-4 mr-1 text-yellow-500"
-                                    fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M5.05 3.05a7 7 0 019.9 9.9L10 18.9l-4.95-5.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Kathmandu, Nepal
-                            </div>
-                            <!-- Rating -->
-                            <div class="flex items-center text-sm">
-                                <!-- Stars -->
-                                <div class="flex text-yellow-400 mr-2">
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg
-                                        class="w-4 h-4 fill-current text-gray-300"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                </div>
-                                <span class="text-gray-600">584 reviews</span>
-                            </div>
-                            <!-- Price + Button -->
-                            <div class="flex items-center justify-between">
-                                <p
-                                    class="text-lg font-bold text-yellow-500">$35.00
-                                    <br>
-                                    <span
-                                        class="text-sm font-normal text-gray-500">per
-                                        person</span>
-                                </p>
-                                <button
-                                    class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">
-                                    Book Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card -->
-                    <div
-                        class=" bg-white rounded-2xl shadow-lg overflow-hidden">
-                        <!-- Image -->
-                        <img src="/images/face.png"
-                            alt="Nirvana Lounge"
-                            class="w-full h-56 object-cover">
-                        <!-- Card Content -->
-                        <div class="p-5 space-y-3">
-                            <!-- Title -->
-                            <h2
-                                class="text-xl font-semibold text-gray-800">Nirvana
-                                Lounge</h2>
-                            <!-- Location -->
-                            <div
-                                class="flex items-center text-gray-500 text-sm">
-                                <!-- Location Icon -->
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-4 h-4 mr-1 text-yellow-500"
-                                    fill="currentColor"
-                                    viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                        d="M5.05 3.05a7 7 0 019.9 9.9L10 18.9l-4.95-5.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                Kathmandu, Nepal
-                            </div>
-                            <!-- Rating -->
-                            <div class="flex items-center text-sm">
-                                <!-- Stars -->
-                                <div class="flex text-yellow-400 mr-2">
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg class="w-4 h-4 fill-current"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                    <svg
-                                        class="w-4 h-4 fill-current text-gray-300"
-                                        viewBox="0 0 20 20"><path
-                                            d="M10 15l-5.878 3.09 1.122-6.545L.489 6.91l6.561-.955L10 0l2.95 5.955 6.561.955-4.755 4.635 1.122 6.545z" /></svg>
-                                </div>
-                                <span class="text-gray-600">584 reviews</span>
-                            </div>
-                            <!-- Price + Button -->
-                            <div class="flex items-center justify-between">
-                                <p
-                                    class="text-lg font-bold text-yellow-500">$35.00
-                                    <br>
-                                    <span
-                                        class="text-sm font-normal text-gray-500">per
-                                        person</span>
-                                </p>
-                                <button
-                                    class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">
-                                    Book Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </section>
-            <!-- Call to action section -->
-             <section>
-                
-             </section>
+            <footer id="footer"></footer>
+            <!-- <script src="/scripts/blaise.js"></script> -->
+            <script src="/scripts/utils.js"></script>
+            <script src="./scripts/chris.js"></script>
         </body>
     </html>

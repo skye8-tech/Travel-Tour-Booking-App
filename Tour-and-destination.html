@@ -6,8 +6,7 @@
         <link href="./src/output.css" rel="stylesheet">
 
     </head>
-    <body background
-        class="flex flex-col gap-10 items-cente mx-2 md:mx-20  min-h-screen ">
+
     <body background="" class="flex flex-col gap-10 items-cente  min-h-screen ">
         <section class="relative h-dvh ">
             <div class="flex bg-[url('/images/hero.png')] bg-cover bg-center w-full h-160">
@@ -38,67 +37,7 @@
                 </div>
                 <div class="col-start-2 w-full">
                     <button class="bookbtn relative z-6 px-5 hover:bg-teal-600 py-1 ease-in-out hover:scale-110 transition-all duration-500 bg-teal-500 hover:cursor-pointer rounded-full bg">Book Now</button>
-                    <form action="#" class="bg-gray-300 transition-all ease-in-out duration-100 hidden relative bottom-0 w-80   p-2 text-black group-active:flex flex-col justify-center">
-                <div class="group col-start-2 w-full">
-                    <button class="px-5 py-1 bg-teal-500 rounded-full bg">Book
-                        Now</button>
-                    <form action="#"
-                        class="bg-gray-300 hidden w-80 absolute p-2 text-black group-active:flex flex-col justify-center
-                    items-center-safe gap-2">
-                        <span class="closebtn position absolute transition ease-in duration-500 hover:scale-140 hover:cursor-pointer right-3 top-0 text-2xl text-red-400">x</span>
-                        <h1 class=" font-bold text-center text-2xl">Book This Tour</h1>
-                        <p class="description text-center">
-                            Please ensure all required fields are completed
-                            accurately
-                            to help us process your booking smoothly.
-                        </p>
-
-                        <div class="w-full flex flex-col gap-2">
-                            <div class="flex gap-4 bg-white p-2">
-                                <img src="./images/name.svg" alt="">
-                                <input type="text" required placeholder="Name" class="w-full focus:outline-0">
-                                <img src="./images/name.svg" alt>
-                                <input type="text" required placeholder="Name"
-                                    class="focus:outline-0">
-                            </div>
-                            <div class="flex gap-4 bg-white p-2">
-                                <img src="./images/email.svg" alt="">
-                                <input type="email" required placeholder="Email" class="w-full focus:outline-0">
-                                <img src="./images/email.svg" alt>
-                                <input type="email" required placeholder="Email"
-                                    class="focus:outline-0">
-                            </div>
-                            <div class="flex gap-4 bg-white p-2">
-                                <img src="./images/phone.svg" alt="">
-                                <input type="phone" required placeholder="Phone" class="w-full focus:outline-0">
-                                <img src="./images/phone.svg" alt>
-                                <input type="phone" required placeholder="Phone"
-                                    class="focus:outline-0">
-                            </div>
-                            <div class="flex gap-4 bg-white p-2">
-                                <img src="./images/email.svg" alt="">
-                                <input type="number" required placeholder="Number of persons" min="1" class="w-full focus:outline-0">
-                                <img src="./images/email.svg" alt>
-                                <input type="number" required
-                                    placeholder="Number of persons" min="1"
-                                    class="focus:outline-0">
-                            </div>
-                            <div class="flex gap-4 bg-white p-2">
-                                <img src="./images/date.svg" alt="">
-                                <input type="date" required placeholder="date" class="w-full focus:outline-0">
-                                <img src="./images/date.svg" alt>
-                                <input type="date" required placeholder="date"
-                                    class="focus:outline-0">
-                            </div>
-
-                            <button type="submit" class="text-white mx-auto px-4 py-1 rounded-2xl w-2/4 hover:scale-90 ease-in-out hover:bg-orange-600 transition-all duration-500 bg-orange-500"> Confirm</button>
-                            
-                            <button type="submit"
-                                class="text-white mx-auto px-4 py-1 rounded-2xl w-2/4 bg-orange-500">
-                                Confirm</button>
-
-                        </div>
-                    </form>
+                    
                 </div>
             </div>
 
@@ -125,20 +64,10 @@
         <footer id="footer">
             
         </footer>
-        <script src="./scripts/chris.js"></script>
+        <script src="./scripts/main.js"></script>
+        <script src="./scripts/tourdetails.js"></script>
         <script>
-          let formElem =  document.querySelector('form')
-          function popUp(){
-              formElem.style.display = 'grid'
-            }
-
-        function closeTour(){
-            formElem.style.display = 'none'
-        }
-
-        let btn =document.querySelector('.bookbtn')
-        btn.addEventListener('click', ()=>popUp())
-        document.querySelector('.closebtn').addEventListener('click',()=> closeTour())
+         
         
         </script>
     </body>

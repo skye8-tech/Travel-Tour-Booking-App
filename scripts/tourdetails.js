@@ -180,6 +180,7 @@ let travels = [
   },
 ];
 
+
 function insertDetails(details){
     let html = `
         <img src='${details.images[0]}' class="w-70 rounded-full " alt="tor image">
@@ -274,11 +275,25 @@ function insertsGalery(details) {
 
 
 
-function renderPage(Tour) {
-  insertDetails(Tour);
-  insertsGalery(Tour);
-  insertItinarery(Tour);
+function renderPage(Tour){
+    insertDetails(Tour)
+    handleDropdown()
+    insertItinarery(Tour)
+    insertsGalery(Tour)
 }
 
-
-// renderPage(Tour[0])
+renderPage(Tour[1])
+function handleDropdown(){
+    let formElem =  document.querySelector('form')
+             function popUp(){
+                 formElem.style.display = 'grid'
+               }
+   
+           function closeTour(){
+               formElem.style.display = 'none'
+           }
+   
+           let btn =document.querySelector('.bookbtn')
+           btn.addEventListener('click', ()=>popUp())
+           document.querySelector('.closebtn').addEventListener('click',()=> closeTour())
+}

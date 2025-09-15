@@ -44,7 +44,7 @@ let tours = [
     includes: ["lodging", "meals", "guided safaris"],
     duration: { days: 3, hours: "" },
     images: [
-      "../images/waza/0.jpg",
+      "../images/lake oku/0.jpg",
       "../images/waza/1.jpg",
       "../images/waza/2.jpg",
       "../images/waza/3.jpg",

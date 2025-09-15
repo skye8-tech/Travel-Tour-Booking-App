@@ -435,3 +435,67 @@ let travels = [
     },
     
 ]
+
+class Data{
+  // all = []
+  constructor(){
+    this.all = travels.concat(Tour)
+    // console.log(self.all)
+  }
+
+  display(){
+    console.log(this.a)
+  }
+
+  filters(obj={keyword :'jiwi', from:'mnfswefwsfhwfwsfe', to: 'jdjfioewjweke',}){
+    let filterd = []
+    let key = []
+    let locationfrom=[]
+    let locationTo = []
+    /*by keyword */
+    this.all.forEach(event=>{
+      for (let e in event){
+        switch(e){
+          case 'description':
+            if (event[e].toLowerCase().includes(obj.keyword.toLowerCase())){
+              key.push(event)
+            }
+            break
+          case 'destination':
+              if (event[e].toLowerCase().includes(obj.keyword.toLowerCase())){
+              key.push(event)
+            }
+              break
+          case 'to':
+              if (event[e].toLowerCase().includes(obj.keyword.toLowerCase())){
+                key.push(event)
+            } 
+            else if (event[e].toLowerCase().includes(obj.to.toLowerCase())){
+              locationTo.push(event)
+            }
+            // console.log(event[e].toLowerCase().includes(obj.to.toLowerCase()),event[e].toLowerCase(), )
+                break
+          case 'from':
+            if (event[e].toLowerCase().includes(obj.from.toLowerCase())){
+                // key.push(event)
+                locationfrom.push(event)
+            }
+            break
+          case 'includes':
+            event[e].join(' ').toLowerCase().includes(obj.keyword.toLowerCase()) && key.push(event)
+            break
+        }
+      }
+    })
+
+    filterd = key.concat(locationTo.concat(locationfrom))
+    let handleDuplicate = []
+    handleDuplicate = filterd.filter(objct=>!(handleDuplicate.includes(objct) ))
+    console.log(handleDuplicate)
+  }
+}
+
+export let available = new Data
+available.filters({keyword:'mount cameroon', from:'younde', to: 'banso'})
+
+

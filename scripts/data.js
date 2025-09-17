@@ -447,7 +447,7 @@ class Data{
     console.log(this.a)
   }
 
-  filters(obj={keyword :'jiwi', from:'mnfswefwsfhwfwsfe', to: 'jdjfioewjweke',}){
+  filters(obj={keyword :'jiwsvsdfsi', from:'mnfswefwsfhwfwsfe', to: 'jdjfioewjweke',}){
     let filterd = []
     let key = []
     let locationfrom=[]
@@ -489,13 +489,30 @@ class Data{
     })
 
     filterd = key.concat(locationTo.concat(locationfrom))
-    let handleDuplicate = []
-    handleDuplicate = filterd.filter(objct=>!(handleDuplicate.includes(objct) ))
-    console.log(handleDuplicate)
+    console.log(filterd)
   }
 }
 
 export let available = new Data
-available.filters({keyword:'mount cameroon', from:'younde', to: 'banso'})
+available.filters({keyword:'fewfsfsf', from:'dfsesf', to: 'banso'})
+
+class User{
+  constructor(){
+    this.booked =JSON.parse(localStorage.getItem('bookedStuff'))|| [Tour[0], travels[0]]
+  }
+  saveToStorage(){
+    localStorage.setItem("bookedStuff",JSON.stringify(this.booked))
+  }
+
+  book(obj){
+    this.booked.push(obj)
+    this.saveToStorage()
+  }
+}
+
+export let user = new User
+// user.book(Tour[2])
+// console.log(localStorage.getItem('bookedStuff'))
+localStorage.setItem('detailvalue', JSON.stringify(Tour[0]))
 
 

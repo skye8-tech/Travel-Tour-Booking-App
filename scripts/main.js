@@ -1,12 +1,12 @@
 function insertFooter(){
     let FooterElem = document.getElementById('footer')
     FooterElem.innerHTML = `
-    <div class="grid grid-flow-col grid-row-4 bg-white gap-4 font-light">
-        <div >
+    <div class="grid text-center sm:grid-flow-col grid-row-4 bg-white gap-4 font-light">
+        <div>
                 <h1 class="font-bold ml-4">Follow us</h1>
-                <i class="fa-brands fa-facebook"></i>
-                 <i class="fa-solid fa-xmark"></i>
-                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook">facebook</i>
+                 <i class="fa-solid fa-xmark">xmark</i>
+                <i class="fa-brands fa-instagram">instagram</i>
              </div>
              <div>
             <ul>

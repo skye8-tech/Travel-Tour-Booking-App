@@ -1,4 +1,5 @@
-let Tour = [
+import { available } from "./data.js";
+let item = [
   {
     title: "Menchum Falls",
     destination: "Menchum Falls, Northwest, Cameroon",
@@ -276,14 +277,94 @@ let Tour = [
   },
 ];
 
+// populates list when fildered
+function populateCards(list){
+  let gridArea = document.getElementById("replaceable");
+  gridArea.innerHTML = ''
+  let html =''
+  console.log(gridArea)
+  list.forEach((item, idx)=>{
+    let string = JSON.stringify(item)
+    let div = document.createElement('div')
+   div.innerHTML = `
+        <div
+                            class="min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] bg-white rounded-xl shadow-md overflow-hidden mx-2">
+                            <img class="h-48 w-full object-cover"
+                                src="${item.images[0]}"
+                                alt>
+                            <div class="p-4">
+                                <h3 class="font-semibold text-lg">${item.title}</h3>
+                                <!-- Location -->
+                                <div
+                                    class="flex items-center text-gray-500 text-sm">
+                                    <!-- Location Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="w-4 h-4 mr-1 text-yellow-500"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M5.05 3.05a7 7 0 019.9 9.9L10 18.9l-4.95-5.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                   ${item.destination ? item.destination : 'From ' +item.from+ " To "+ item.to}
+                                </div>
+                                <div class="flex items-center my-2">
+                                    <span class="text-yellow-400">★★★★★</span>
+                                    <span class="text-gray-600 text-sm ml-2">584
+                                        reviews</span>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <p
+                                        class="text-lg font-bold text-yellow-500">${item.price}
+                                        <br>
+                                        <span
+                                            class="text-sm font-normal text-gray-500">per
+                                            person</span>
+                                    </p>
+                                    <a href="../Tour-and-destination.html"  class ="stuff"
+                                        class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">
+                                        Book Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+  `;
+  div.addEventListener('click', ()=> handleClick(item))
+  gridArea.appendChild(div)
+  })
+}
+
+// saves a tour to local storage whe it is clicked on so it can be loaded in other pages
+let handleClick= (obj)=>{
+        localStorage.setItem("detailvalue",JSON.stringify(obj))
+      }
+
+// handles filters and searches 
+function handleFilter(){
+  let keywords = document.getElementById("keywords").value
+  let from = document.getElementById("from").value
+  let to= document.getElementById("to").value
+  let filterobj = {
+    keyword:keywords,
+    from,
+    to
+  }
+
+  let f =  available.filters(filterobj)
+  populateCards(f)
+}
+let searchbtn= document.getElementById("sbtn")
+searchbtn.addEventListener("click", ()=>handleFilter())
+
 
 // function to render location cards
 function tourCards(Tour) {
-  console.log(Tour);
-  let html = "";
+  const toursCard = document.getElementById("carousel");
+  
   Tour.forEach((Tour) => {
-    console.log(Tour);
-    html += `
+    let div = document.createElement("div")
+    div.innerHTML = `
         <div
                             class="min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] bg-white rounded-xl shadow-md overflow-hidden mx-2">
                             <img class="h-48 w-full object-cover"
@@ -318,7 +399,7 @@ function tourCards(Tour) {
                                             class="text-sm font-normal text-gray-500">per
                                             person</span>
                                     </p>
-                                    <a href="#"
+                                    <a href="../Tour-and-destination.html"
                                         class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition">
                                         Book Now
                                     </a>
@@ -327,11 +408,9 @@ function tourCards(Tour) {
                         </div>
 
   `;
+  div.addEventListener('click', ()=>handleClick(Tour))
+  toursCard.appendChild(div)
   });
-
-  const toursCard = document.getElementById("carousel");
-
-  toursCard.innerHTML = html;
 }
 
-tourCards(Tour);
+tourCards(item);

@@ -44,5 +44,24 @@ function insertFooter(){
              </div>
             </div>
     `
+
+}
+
+function insertNav(){
+    let div = document.createElement('div')
+    div.innerHTML= `<nav class="flex items-center justify-between px-6 py-4 fixed top-0 w-full z-50 bg-green-600 h-16">
+
+    <span class="text-3xl">Take-off</span>
+
+   
+    <ul  class="flex flex-row justify-between gap-6 mt-2.5">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tour-design.html">Trips/Travel</a></li>
+    <li><a href="./my trips.html">My Trips</a></li>
+    </ul>
+
+     </nav>`
+     let me =document.getElementById("navigation").appendChild(div)
 }
 insertFooter()
+insertNav()

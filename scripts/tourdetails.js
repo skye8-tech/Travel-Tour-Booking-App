@@ -1,194 +1,15 @@
 /* structure of data for a tiur */
-let Tour = [
-  {
-    title: "Mount Cameroon",
-    destination: "Mount Cameroon, Buea, Cameroon",
-    description:
-      "Embark on an unforgettable adventure to Mt Cameroon, West Africa’s highest peak and one of the continent’s most active volcanoes. Rising nearly 14,000 feet above sea level, this majestic mountain offers sweeping views, diverse ecosystems, and a thrilling ascent through tropical forests, alpine meadows, and volcanic craters.",
-    price: 50000,
-    ratings: {
-      starcount: 5,
-      reviews: 30,
-    },
-    itinerary: [
-      {
-        day: 1,
-        title: "Arrival & Trek Start",
-        activities: [
-          "Arrive in Buea",
-          "Begin trek through tropical forest",
-          "Reach first refuge hut (~2,000m)",
-          "Overnight in tents under the stars",
-        ],
-      },
-      {
-        day: 2,
-        title: "Summit Push",
-        activities: [
-          "Ascend through savannah and alpine zones",
-          "Reach summit plateau (~4,100m)",
-          "Explore volcanic craters and lava flows",
-          "Descend to second refuge hut for overnight",
-        ],
-      },
-      {
-        day: 3,
-        title: "Return & Cultural Exploration",
-        activities: [
-          "Descend back to Buea",
-          "Optional visit to Limbe",
-          "Explore black sand beaches",
-          "Visit Limbe Botanical Garden",
-          "Discover local cuisine and culture",
-        ],
-      },
-    ],
-    includes: ["hosting", "feeding", "No Internet"],
-    duration: {
-      days: 4,
-      hours: "",
-    },
-    images: [
-      "../images/mountCam/1.jpg",
-      "../images/mountCam/0.jpg",
-      "../images/mountCam/3.jpg",
-      "../images/mountCam/4.jpeg",
-      "../images/mountCam/5.jpeg",
-      "../images/mountCam/6.jpeg",
-    ],
-  },
-
-  {
-    title: "Limbe Botanic garden",
-    destination: "Limbe",
-    description:
-      "Established in 1892, this lush sanctuary nestled between the Atlantic Ocean and Mount Cameroon showcases over 1,500 plant species, including rare and endemic flora. Originally a colonial research hub, it now serves as a vibrant center for conservation, education, and leisure.",
-    price: 30000,
-    ratings: {
-      starcount: 4.5,
-      reviews: 30,
-    },
-    itinerary: [
-      {
-        day: 1,
-        title: "forent Tour",
-        activities: [
-          "Rainforest walking trails",
-          "Medicinal plant garden",
-          "Ornamental flower collections",
-        ],
-      },
-    ],
-    includes: ["Np internet", "2 meals"],
-    duration: 3,
-    images: [
-      "../images/botGarden/0.jpeg",
-      "../images/botGarden/1.jpg",
-      "../images/botGarden/2.jpeg",
-      "../images/botGarden/3.jpeg",
-      "../images/botGarden/4.jpeg",
-      "../images/botGarden/5.jpeg",
-      "../images/botGarden/6.jpeg",
-      "../images/botGarden/7.jpeg",
-    ],
-  },
-  {
-    title: "Parc De La Mefou",
-    destination: "Yaoundé",
-    description:
-      "More than a wildlife experience, Méfou is a powerful lesson in biodiversity, environmental stewardship, and the fight to preserve Cameroon’s natural heritage. Whether youre a nature lover, a curious traveler, or a family seeking an educational adventure, this peaceful forest refuge delivers unforgettable encounters and meaningful insight.",
-    price: 10000,
-    ratings: {
-      starcount: 4.0,
-      reviews: 60,
-    },
-    itinerary: [
-      {
-        day: 1,
-        title: "Parc de la Méfou Wildlife Experience",
-        activities: [
-          "08:00 – Depart from Yaoundé",
-          "09:00 – Arrive at Parc de la Méfou",
-          "09:15 – Guided forest walk begins",
-          "09:30 – Observe rescued chimpanzees and gorillas in natural enclosures",
-          "10:30 – Learn about Ape Action Africa’s conservation efforts",
-          "11:00 – Visit mandrill and monkey habitats",
-          "12:00 – Break for refreshments or picnic lunch",
-          "13:00 – Optional second walk or photography session",
-          "14:00 – Wrap-up and depart from the park",
-          "15:00 – Return to Yaoundé",
-        ],
-      },
-    ],
-
-    includes: ["housing", "feeding", "wifi"],
-    duration: 3,
-    images: [
-      "../images/parcde/0.jpeg",
-      "../images/parcde/1.jpeg",
-      "../images/parcde/2.jpeg",
-      "../images/parcde/3.jpeg",
-      "../images/parcde/4.jpeg",
-      "../images/parcde/5.jpeg",
-    ],
-  },
-];
-
-/* structure of data for travels page */
-let travels = [
-  {
-    title: "Camair",
-    from: "younde",
-    to: "douala",
-    description:
-      "We are a full-service travel agency dedicated to crafting unforgettable journeys across Cameroon and beyond. Whether you're seeking a relaxing beach escape, a thrilling mountain trek, or a deep dive into cultural heritage, we handle every detail—from itinerary planning and accommodation to guided tours and local experiences.",
-    price: 15000,
-    ratings: {
-      starCount: 5.0,
-      reviews: 101,
-    },
-    duration: 1,
-    images: [
-      "../images/camair/default.jpeg",
-      "../images/camair/0.jpeg",
-      "../images/camair/1.jpeg",
-      "../images/camair/2.jpeg",
-      "../images/camair/3.jpeg",
-      "../images/camair/4.jpeg",
-      "../images/camair/5.jpeg",
-    ],
-  },
-  {
-    title: "Nso Boyz",
-    from: "Ndop",
-    to: "Banso",
-    description:
-      "With expert knowledge of destinations, personalized service, and a passion for exploration, we simplify travel so you can focus on the joy of discovery. From solo travelers to group expeditions, our mission is to turn your travel dreams into reality—safely, smoothly, and memorably.",
-    price: 3000,
-    duration: 1,
-    ratings: {
-      starCount: 4.0,
-      reviews: 101,
-    },
-    images: [
-      "../images/nsoboyz/0.jpeg",
-      "../images/nsoboyz/1.jpeg",
-      "../images/nsoboyz/2.jpeg",
-      "../images/nsoboyz/3.jpeg",
-      "../images/nsoboyz/4.jpeg",
-    ],
-  },
-];
-
+import { available, user } from "./data.js";
 
 function insertDetails(details){
+  
     let html = `
         <img src='${details.images[0]}' class="w-70 rounded-full " alt="tor image">
                 <div class="details col-span-2 md:col-start-2 md:col-span-1  grid gap-0.5 ">
                     <h3 class="font-bold text-2xl">${details.title}</h3>
                     <div class="minors  ml-3 text-2xs">
-                        <span class="">${details.destination}</span>
-                        <span> <span class="">⭐⭐⭐⭐⭐</span>|  ${details.ratings.starcount} (${details.ratings.reviews})</span>
+                        <span class="">${(details.destination) ||('From '+ details.from+ ' to '+ details.to)}</span>
+                        <span> <span class="">⭐⭐⭐⭐⭐</span>|  ${details.ratings.starCount} (${details.ratings.reviews})</span>
                     </div>
                     <p class="text-2xs">${details.description}</p>
                 </div>
@@ -198,7 +19,8 @@ function insertDetails(details){
                     <button class="bookbtn relative z-6 px-5 hover:bg-teal-600 py-1 ease-in-out hover:scale-110 transition-all duration-500 bg-teal-500 hover:cursor-pointer rounded-full bg">Book Now</button>
                     <span class= "">share</span>
                     </div>
-                    <form action="#" class="bg-gray-300 transition-all ease-in-out duration-100 hidden relative bottom-0 w-80   p-2 text-black group-active:flex flex-col justify-center
+
+                    <form action="#" class="bg-gray-300 transition-all ease-in-out duration-100 hidden  relative bottom-0 w-80   p-2 text-black group-active:flex flex-col justify-center
                     items-center-safe gap-2">
                         <span class="closebtn position absolute transition ease-in duration-500 hover:scale-140 hover:cursor-pointer right-3 top-0 text-2xl text-red-400">x</span>
                         <h1 class=" font-bold text-center text-2xl">Book This Tour</h1>
@@ -210,25 +32,25 @@ function insertDetails(details){
                         <div class="w-full flex flex-col gap-2">
                             <div class="flex gap-4 bg-white p-2">
                                 <img src="./images/name.svg" alt="">
-                                <input type="text" required placeholder="Name" class="w-full focus:outline-0">
+                                <input type="text" id='name'  required placeholder="Name" class="w-full focus:outline-0">
                             </div>
                             <div class="flex gap-4 bg-white p-2">
                                 <img src="./images/email.svg" alt="">
-                                <input type="email" required placeholder="Email" class="w-full focus:outline-0">
+                                <input type="email" id='email' required placeholder="Email" class="w-full focus:outline-0">
                             </div>
                             <div class="flex gap-4 bg-white p-2">
                                 <img src="./images/phone.svg" alt="">
-                                <input type="phone" required placeholder="Phone" class="w-full focus:outline-0">
+                                <input type="phone" id= 'phone' required placeholder="Phone" class="w-full focus:outline-0">
                             </div>
                             <div class="flex gap-4 bg-white p-2">
                                 <img src="./images/email.svg" alt="">
-                                <input type="number" required placeholder="Number of persons" min="1" class="w-full focus:outline-0">
+                                <input type="number" id='members' required placeholder="Number of persons" min="1" class="w-full focus:outline-0">
                             </div>
                             <div class="flex gap-4 bg-white p-2">
                                 <img src="./images/date.svg" alt="">
-                                <input type="date" required placeholder="date" class="w-full focus:outline-0">
+                                <input type="date" id='date' required placeholder="date" class="w-full focus:outline-0">
                             </div>
-
+                            <p id= 'total' class='text-center text-teal-600 font-bold'>Total: ${details.price}</p>
                             <button type="submit" class="text-white mx-auto px-4 py-1 rounded-2xl w-2/4 hover:scale-90 ease-in-out hover:bg-orange-600 transition-all duration-500 bg-orange-500"> Confirm</button>
                             
                         </div>
@@ -241,7 +63,7 @@ function insertDetails(details){
 
 function insertItinarery(details) {
   let acumulator = "";
-  details.itinerary.forEach((day, idx) => {
+  details.itinerary && details.itinerary.forEach((day, idx) => {
     const listTOdo = () => {
       let acc = "";
       day.activities.forEach((activity) => {
@@ -273,16 +95,14 @@ function insertsGalery(details) {
   galleryElem.innerHTML = html;
 }
 
-
-
 function renderPage(Tour){
     insertDetails(Tour)
     handleDropdown()
-    insertItinarery(Tour)
     insertsGalery(Tour)
+    insertItinarery(Tour)
 }
-
-renderPage(Tour[1])
+let detailsValue = JSON.parse(localStorage.getItem('detailvalue'))
+renderPage(detailsValue)
 function handleDropdown(){
     let formElem =  document.querySelector('form')
              function popUp(){
@@ -297,3 +117,75 @@ function handleDropdown(){
            btn.addEventListener('click', ()=>popUp())
            document.querySelector('.closebtn').addEventListener('click',()=> closeTour())
 }
+// total price calculator
+
+let members =document.getElementById('members')
+console.log()
+members.addEventListener('change', ()=>{
+  document.getElementById('total').innerHTML = 'Total: ' + members.value *detailsValue.price
+})
+
+function book(){
+  let formElem = document.querySelector('form')
+  formElem.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    let name =document.getElementById('name').value
+    let email =document.getElementById('email').value
+    let phone =document.getElementById('phone').value
+    let members =document.getElementById('members')
+    let date = document.getElementById('date').value
+    let total = members.value * detailsValue.price
+     let  bookingData= {
+        name,
+        email,
+        members: members.value,
+        phone,
+        total,
+        date,
+      }
+      user.book({user:bookingData, details: detailsValue})
+    console.log(user)
+    alert('clicked')
+  })
+}
+
+// function populateCards(list){
+//   let div = document.createElement('div')
+//   // div.setAttribute('class', )
+//   list.forEach((item, idx)=>{
+//     let html = `<a href='./Tour-and-destination.html' onclick = 'localStorage.setItem('detailvalue', JSON.stringify(item))'>
+//                     <div class="card gap-0">
+//                   <div>
+//                     <img src="${item.images[0]}" alt=""  class="rounded-tl-lg w-full rounded-tr-lg">
+//                   </div>
+//                   <div class="w-96 h-40 bg-white pl-5 pt-3 ml-0 rounded-b-lg">
+//                     <h2 class="font-bold">${item.title}</h2>
+//                     <span><i class="fa-solid fa-location-dot font-light" style="color: #FFD43B;" ></i>Kathmandu,Nepal</span><br>
+//                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+//                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+//                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+//                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+//                     <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+//                     <span class="ml-2">${item.ratings.reviews} reviews</span><br>
+//                     <div>
+//                       <span>
+//                         <h2>
+                          
+//                         </h2>
+//                       </span>
+//                     </div>
+//                         <span class="text-yellow-400">${item.price}-xaf</span><br>
+//                         <span>Per person</span>
+//                        <a href=""> <button class="bg-green-400 w-32  ml-32 h-10 rounded-tr-lg rounded-tl-lg rounded-bl-lg rounded-br-lg">Book now</button></a>
+//                     </span>
+//                   </div>
+//                   </div>
+//                   </a>
+//     `
+//     div.innerHTML += html
+//   })
+//   let galleryElem = document.getElementById("gallery");
+//   galleryElem.appendChild(div)
+// }
+book()
+populateCards(available.all)

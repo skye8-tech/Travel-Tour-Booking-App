@@ -435,3 +435,84 @@ let travels = [
     },
     
 ]
+
+class Data{
+  // all = []
+  constructor(){
+    this.all = travels.concat(Tour)
+    // console.log(self.all)
+  }
+
+  display(){
+    console.log(this.a)
+  }
+
+  filters(obj={keyword :'jiwsvsdfsi', from:'mnfswefwsfhwfwsfe', to: 'jdjfioewjweke',}){
+    let filterd = []
+    let key = []
+    let locationfrom=[]
+    let locationTo = []
+    /*by keyword */
+    this.all.forEach(event=>{
+      for (let e in event){
+        switch(e){
+          case 'description':
+            if (event[e].toLowerCase().includes(obj.keyword.toLowerCase())){
+              key.push(event)
+            }
+            break
+          case 'destination':
+              if (event[e].toLowerCase().includes(obj.keyword.toLowerCase())){
+              key.push(event)
+            }
+              break
+          case 'to':
+              if (event[e].toLowerCase().includes(obj.keyword.toLowerCase())){
+                key.push(event)
+            } 
+            else if (event[e].toLowerCase().includes(obj.to.toLowerCase())){
+              locationTo.push(event)
+            }
+            // console.log(event[e].toLowerCase().includes(obj.to.toLowerCase()),event[e].toLowerCase(), )
+                break
+          case 'from':
+            if (event[e].toLowerCase().includes(obj.from.toLowerCase())){
+                // key.push(event)
+                locationfrom.push(event)
+            }
+            break
+          case 'includes':
+            event[e].join(' ').toLowerCase().includes(obj.keyword.toLowerCase()) && key.push(event)
+            break
+        }
+      }
+    })
+
+    filterd = key.concat(locationTo.concat(locationfrom))
+    console.log(filterd)
+  }
+}
+
+export let available = new Data
+available.filters({keyword:'fewfsfsf', from:'dfsesf', to: 'banso'})
+
+class User{
+  constructor(){
+    this.booked =JSON.parse(localStorage.getItem('bookedStuff'))|| [Tour[0], travels[0]]
+  }
+  saveToStorage(){
+    localStorage.setItem("bookedStuff",JSON.stringify(this.booked))
+  }
+
+  book(obj){
+    this.booked.push(obj)
+    this.saveToStorage()
+  }
+}
+
+export let user = new User
+// user.book(Tour[2])
+// console.log(localStorage.getItem('bookedStuff'))
+localStorage.setItem('detailvalue', JSON.stringify(Tour[0]))
+
+

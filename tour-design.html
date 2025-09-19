@@ -8,35 +8,110 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body  class="bg-sky-100">
-    <section class="bg-[url('/background.svg')] bg-center bg-blend-darken w-full h-150 bg-cover bg-no-repeat">
-     <nav class="flex items-center justify-between">
-    <header class="bg-[url(background.svg)] w-full h-48 bg-cover bg-no-repeat">
-     <nav class="flex items-center justify-between px-6 py-4 fixed top-0 w-full z-50 bg-green-600 h-16">
+    <header
+            class="header relative h-screen bg-[url('/images/hero.png')] bg-cover bg-center ">
+            <!-- navbar -->
+            <nav class="flex items-center justify-between px-6 py-4  top-0 w-full z-50  h-16">
     <div class="ml-6">
     <span class="text-3xl">Take-off</span>
       </div>
     <div class="flex flex-row justify-between gap-6 mr-20 mt-5">
-    <ul  class="flex flex-row justify-between gap-6 mt-2.5">
-      <li >Home</a></li>
-      <li><a href="">About Us</a></li>
-    <li><a href="">Contact Us</a></li>
-    </ul>
-        <a class="bg-green-600 hover:bg-green-400 w-28 h-10">sign in</a>
+    <div  class="flex flex-row justify-between gap-6 mt-2.5">
+      <a href="index.html">Home</a>
+      <a href="tour-design.html">My destination</a>
+    <a href="my trips.html">My Trip</a>
+    </div>
+        <a class="bg-green-600 hover:bg-green-400   text-center px-6 py-1 ">sign in</a>
          </div>
      </nav>
-     <div class="absolute text-black flex flex-col my-50  justify-center w-full items-center text-center px-4">
-                    <h2 class="text-3xl md:text-5xl font-bold">Where Plans <span class="text-blue-600">Take Off</span></h2>
-                    <p class="mt-4 max-w-2xl">Gorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+            <!-- Hero Content -->
+            <div
+                class="absolute inset-0 flex flex-col justify-center items-center text-center text-black px-4 ">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    Where Plans <span class="text-green-400">Take Off</span>
+                </h1>Gorem ipums dolor sit amet, consectetur adipiscing elit.Nunc vulputate<br>
+                libero et velit interdum, ac aliquet odio mattis.Class aptent taciti
+                <p class="max-w-2xl mb-10">
+                    
+                </p>
+                <div
+                    class="max-w-6xl mx-auto">
+                    <!-- Tabs -->
+                    <div class="flex">
+                        <button
+                            class="px-6 py-3 font-semibold bg-gray-100 text-gray-700">One-Way</button>
+                        <button
+                            class="px-6 py-3 font-semibold bg-teal-600 text-white">Round-Trip</button>
+                    </div>
+
+                    <!-- Form Grid -->
+                    <div
+                        class="bg-white grid grid-cols-1 md:grid-cols-5 divide-x divide-gray-200">
+
+                        <!-- Origin -->
+                        <div class="flex flex-col px-4 py-3">
+                            <label
+                                class="text-sm font-medium text-gray-700">From</label>
+                            <div class="flex items-center text-gray-500 mt-1">
+                                <span class="mr-2">✈️</span>
+                                <input type="text" placeholder="Origin..."
+                                    class="focus:outline-none w-full text-sm placeholder-gray-400">
+                            </div>
+                        </div>
+
+                        <!-- Destination -->
+                        <div class="flex flex-col px-4 py-3">
+                            <label
+                                class="text-sm font-medium text-gray-700">To</label>
+                            <div class="flex items-center text-gray-500 mt-1">
+                                <span class="mr-2">🛬</span>
+                                <input type="text" placeholder="Destination..."
+                                    class="focus:outline-none w-full text-sm placeholder-gray-400">
+                            </div>
+                        </div>
+
+                        <!-- Departure -->
+                        <div class="flex flex-col px-4 py-3">
+                            <label
+                                class="text-sm font-medium text-gray-700">Departure</label>
+                            <div class="flex items-center text-gray-500 mt-1">
+                                <span class="mr-2">📅</span>
+                                <input type="date"
+                                    class="focus:outline-none w-full text-sm text-gray-500">
+                            </div>
+                        </div>
+
+                        <!-- Passenger -->
+                        <div class="flex flex-col px-4 py-3">
+                            <label
+                                class="text-sm font-medium text-gray-700">Passenger</label>
+                            <div class="flex items-center text-gray-500 mt-1">
+                                <span class="mr-2">🧍</span>
+                                <input type="text"
+                                    placeholder="Traveller(s), Class"
+                                    class="focus:outline-none w-full text-sm placeholder-gray-400">
+                            </div>
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="flex justify-center items-center">
+                            <button
+                                class="w-full h-full bg-teal-600 hover:bg-teal-700 text-white font-semibold text-lg">
+                                Search Flight
+                            </button>
+                        </div>
+                    </div>
                 </div>
-        </section>
-    </header>
+
+            </header>
+
         <div class="text-center mb-10">
-         <h1 class="font-bold ml-24 text-2xl ">Explore All Destination</h1>
+         <h1 class="font-bold ml-24 text-2xl mt-10">Explore All Destination</h1>
          <p class="font-light">Vorem ipsum dolor sit amet,consectetur adipiscing elit.Nunc vulputate libero et velit</p>
          <span class="ml-30 font-light">interdum, ac aliquet odio mattis</span>
         </div>
-        <section class="grid grid-row-1 md:grid-cols-3 ml-20 mb-10 gap-4">
-            <div class="card gap-0">
+        <section class="grid grid-row-1 md:grid-cols-3 ml-10 mb-10 gap-4">
+            <div class="card gap-0 id=card">
                   <div>
                     <img src="Nirvana Lounge.svg" alt=""  class="rounded-tl-lg rounded-tr-lg">
                   </div>
@@ -94,8 +169,6 @@
                     </span>
                   </div>
                 </div>
-        </section>
-           <section class="grid grid-row-3 md:grid-cols-3 ml-20 mb-10 gap-0">
             <div class="card gap-0">
                   <div>
                     <img src="Nirvana Lounge.svg" alt=""  class="rounded-tl-lg rounded-tr-lg">
@@ -154,8 +227,6 @@
                     </span>
                   </div>
                 </div>
-        </section>
-           <section class="grid grid-row-3 md:grid-cols-3 ml-20 mb-30 gap-0">
             <div class="card gap-0">
                   <div>
                     <img src="Nirvana Lounge.svg" alt=""  class="rounded-tl-lg rounded-tr-lg">
@@ -210,17 +281,13 @@
                     <span class="ml-2">584 views</span><br>
                         <span class="text-yellow-400">$35.00</span><br>
                         <span>Per person</span>
-                       <a href=""> <button class="bg-green-400 w-32 h-10 ml-32r rounded-tr-lg rounded-tl-lg rounded-bl-lg rounded-br-lg">Book now</button></a>
+                       <a href=""> <button class="bg-green-400 w-32 h-10 ml-32r rounded-tr-lg rounded-tl-lg rounded-bl-lg rounded-br-lg ml-20 hover-crusor">Book now</button></a>
                     </span>
                   </div>
                 </div>
                 </div>
+                
         </section>
-           
-            
-
-        
-    <footer id="footer" class="grid grid-flow-col grid-row-4 bg-white gap-4 font-light mt-32 pl-20">
              
     <footer class="grid grid-flow-col grid-row-4 gap-4 font-light mt-32 ml-20">
              <div>
@@ -265,5 +332,6 @@
              </div>
     </footer>
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/igna.js"></script>
 </body>
 </html>

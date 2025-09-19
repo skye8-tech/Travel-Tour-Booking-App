@@ -6,3 +6,5 @@ npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
 
 
 This will compile your Tailwind CSS from `input.css` to `output.css` and automatically update the styles as you make changes.
+
+deployed link https://travel-tour-booking-app.onrender.com

@@ -391,7 +391,7 @@ let Tour = [
       hours: "",
     },
     images: [
-      "../images/dja/1.jpg",
+      "../images/dja/1.png",
       "../images/dja/2.jpg",
       "../images/dja/3.jpg",
       "../images/dja/4.jpg",

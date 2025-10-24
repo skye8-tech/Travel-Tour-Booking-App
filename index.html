@@ -43,73 +43,62 @@
             </p>
 
             <div
-                class="max-w-6xl mx-auto">
-                <!-- Tabs -->
-                <div class="flex">
-                    <button
-                        class="px-6 py-3 font-semibold bg-gray-100 text-gray-700">One-Way</button>
-                    <button
-                        class="px-6 py-3 font-semibold bg-teal-600 text-white">Round-Trip</button>
-                </div>
-
-                <!-- Form Grid -->
-                <div
-                    class="bg-white grid grid-cols-1 md:grid-cols-5 divide-x divide-gray-200">
-
-                    <!-- Origin -->
-                    <div class="flex flex-col px-4 py-3">
-                        <label
-                            class="text-sm font-medium text-gray-700">From</label>
-                        <div class="flex items-center text-gray-500 mt-1">
-                            <span class="mr-2">✈️</span>
-                            <input type="text" placeholder="Origin..."
-                                class="focus:outline-none w-full text-sm placeholder-gray-400">
-                        </div>
-                    </div>
-
-                    <!-- Destination -->
-                    <div class="flex flex-col px-4 py-3">
-                        <label
-                            class="text-sm font-medium text-gray-700">To</label>
-                        <div class="flex items-center text-gray-500 mt-1">
-                            <span class="mr-2">🛬</span>
-                            <input type="text" placeholder="Destination..."
-                                class="focus:outline-none w-full text-sm placeholder-gray-400">
-                        </div>
-                    </div>
-
-                    <!-- Departure -->
-                    <div class="flex flex-col px-4 py-3">
-                        <label
-                            class="text-sm font-medium text-gray-700">Departure</label>
-                        <div class="flex items-center text-gray-500 mt-1">
-                            <span class="mr-2">📅</span>
-                            <input type="date"
-                                class="focus:outline-none w-full text-sm text-gray-500">
-                        </div>
-                    </div>
-
-                    <!-- Passenger -->
-                    <div class="flex flex-col px-4 py-3">
-                        <label
-                            class="text-sm font-medium text-gray-700">Passenger</label>
-                        <div class="flex items-center text-gray-500 mt-1">
-                            <span class="mr-2">🧍</span>
-                            <input type="text"
-                                placeholder="Traveller(s), Class"
-                                class="focus:outline-none w-full text-sm placeholder-gray-400">
-                        </div>
-                    </div>
-
-                    <!-- Search Button -->
-                    <div class="flex justify-center items-center">
+                    class="max-w-6xl mx-auto">
+                    <!-- Tabs -->
+                    <div class="flex">
                         <button
-                            class="w-full h-full bg-teal-600 hover:bg-teal-700 text-white font-semibold text-lg">
-                            Search Flight
-                        </button>
+                            class="px-6 py-3 font-semibold bg-gray-100 text-gray-700">One-Way</button>
+                        <button
+                            class="px-6 py-3 font-semibold bg-teal-600 text-white">Round-Trip</button>
+                    </div>
+
+                    <!-- Form Grid -->
+                    <div
+                        class="bg-white grid grid-cols-1 md:grid-cols-4 divide-x divide-gray-200">
+
+                        <!-- Origin -->
+                        <div class="flex flex-col px-4 py-3">
+                            <label
+                                class="text-sm font-medium text-gray-700">From</label>
+                            <div class="flex items-center text-gray-500 mt-1">
+                                <span class="mr-2">✈️</span>
+                                <input type="text" id="from" placeholder="Origin..."
+                                    class="focus:outline-none w-full text-sm placeholder-gray-400">
+                            </div>
+                        </div>
+
+                        <!-- Destination -->
+                        <div class="flex flex-col px-4 py-3">
+                            <label
+                                class="text-sm font-medium text-gray-700">To</label>
+                            <div class="flex items-center text-gray-500 mt-1">
+                                <span class="mr-2">🛬</span>
+                                <input type="text" id="to" placeholder="Destination..."
+                                    class="focus:outline-none w-full text-sm placeholder-gray-400">
+                            </div>
+                        </div>
+
+                        <!-- Passenger -->
+                        <div class="flex flex-col px-4 py-3">
+                            <label
+                                class="text-sm font-medium text-gray-700">Search</label>
+                            <div class="flex items-center text-gray-500 mt-1">
+                                <span class="mr-2">🧍</span>
+                                <input type="text" 
+                                    placeholder=" Tour, Location ..."
+                                    class="focus:outline-none w-full text-sm placeholder-gray-400" id="keywords">
+                            </div>
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="flex justify-center items-center">
+                            <button
+                                class="w-full h-full bg-teal-600 hover:bg-teal-700 text-white font-semibold text-lg" id="sbtn">
+                                Search Flight
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
         </header>
 
@@ -253,8 +242,8 @@
         </section>
 
         <!-- location display cards -->
-        <section class="w-[95%] max-w-7xl mx-8 mb-6">
-            <div>
+        <section class="w-[95%] w-3/4 mx-8 mb-6">
+            <div class="mx-auto">
                 <h2 class="text-2xl font-bold">Stay At Our Top unique
                     Properties</h2>
                 <p class="text-sm text-gray-600 mb-8">From Castles Anf
@@ -263,7 +252,7 @@
             </div>
 
             <!-- Carousel Container -->
-            <div class="relative overflow-hidden">
+            <div class="relative overflow-hidden mx-auto">
                 <div id="carousel"
                     class="flex transition-transform duration-500 ease-in-out">
 
@@ -375,10 +364,10 @@
             </div>
         </section>
         <footer id="footer"></footer>
-        <!-- <script src="./scripts/chris.js"></script> -->
-        <script src="./scripts/blaise.js"></script>
+
+        <script src="./scripts/main.js"></script>
+        <script type="module" src="./scripts/index.js"></script>
         <script src="./scripts/utils.js"></script>
-        <!-- <script src="/scripts/blaise.js"></script> -->
 
     </body>
 </html>

@@ -1,5 +1,5 @@
 import { available } from "./data.js";
-let item = [
+let caroselItems = [
   {
     title: "Menchum Falls",
     destination: "Menchum Falls, Northwest, Cameroon",
@@ -276,7 +276,6 @@ let item = [
     ],
   },
 ];
-
 // populates list when fildered
 function populateCards(list){
   let gridArea = document.getElementById("replaceable");
@@ -354,17 +353,17 @@ function handleFilter(){
   let f =  available.filters(filterobj)
   populateCards(f)
 }
+
 let searchbtn= document.getElementById("sbtn")
 searchbtn.addEventListener("click", ()=>handleFilter())
 
 
-// function to render location cards
+// function to render location cards in carosel
 function tourCards(Tour) {
   const toursCard = document.getElementById("carousel");
-  
+  let caroselhtml = ''
   Tour.forEach((Tour) => {
-    let div = document.createElement("div")
-    div.innerHTML = `
+    let html= `
         <div
                             class="min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] bg-white rounded-xl shadow-md overflow-hidden mx-2">
                             <img class="h-48 w-full object-cover"
@@ -408,9 +407,11 @@ function tourCards(Tour) {
                         </div>
 
   `;
-  div.addEventListener('click', ()=>handleClick(Tour))
-  toursCard.appendChild(div)
+  // div.addEventListener('click', ()=>handleClick(Tour))
+  caroselhtml +=html
   });
+  toursCard.innerHTML = caroselhtml
+  console.log(toursCard.innerHTML)
 }
 
-tourCards(item);
+tourCards(caroselItems);

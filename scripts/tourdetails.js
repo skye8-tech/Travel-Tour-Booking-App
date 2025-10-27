@@ -134,6 +134,7 @@ function book(){
     let members =document.getElementById('members')
     let date = document.getElementById('date').value
     let total = members.value * detailsValue.price
+    const today = new Date()
      let  bookingData= {
         name,
         email,
@@ -141,7 +142,9 @@ function book(){
         phone,
         total,
         date,
+        bokedOn: today.toLocaleDateString()
       }
+      console.log(date)
       formElem.reset()
       formElem.style.display = 'none';
       user.book({user:bookingData, details: detailsValue})

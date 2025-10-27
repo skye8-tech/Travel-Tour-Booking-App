@@ -281,7 +281,6 @@ function populateCards(list){
   let gridArea = document.getElementById("replaceable");
   gridArea.innerHTML = ''
   let html =''
-  console.log(gridArea)
   list.forEach((item, idx)=>{
     let string = JSON.stringify(item)
     let div = document.createElement('div')
@@ -411,7 +410,6 @@ function tourCards(Tour) {
   caroselhtml +=html
   });
   toursCard.innerHTML = caroselhtml
-  console.log(toursCard.innerHTML)
 }
 
 tourCards(caroselItems);

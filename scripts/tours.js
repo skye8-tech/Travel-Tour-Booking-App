@@ -58,7 +58,6 @@ function populateCards(list){
   gridArea.appendChild(div)
   })
   // gridArea.innerHTML =html
-  // console.log(gridArea.innerHTML)
 }
 
 // ads event listener to search button and makes sure it works

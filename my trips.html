@@ -131,12 +131,16 @@
     // Cancel Tour
     function openCancelModal(button) {
       selectedTrip = button.closest(".trip");
+
       document.getElementById("cancelModal").classList.remove("hidden");
     }
     function closeCancelModal() {
       document.getElementById("cancelModal").classList.add("hidden");
       selectedTrip = null;
     }
+
+    
+
     function confirmCancel() {
       if (selectedTrip) selectedTrip.remove();
       closeCancelModal();
@@ -215,8 +219,7 @@
       closeAddModal();
     });
   </script>
-    <script src="./scripts/myTrips.js"></script>
+    <script type="module" src="./scripts/myTrips.js"></script>
     <script src="./scripts/main.js"></script>
-   <script src="./scripts/p.js"></script>
 </body>
 </html>

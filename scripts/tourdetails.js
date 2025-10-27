@@ -142,13 +142,12 @@ function book(){
         phone,
         total,
         date,
-        bokedOn: today.toLocaleDateString()
+        bokedOn: today.toLocaleDateString(),
+        
       }
-      console.log(date)
       formElem.reset()
       formElem.style.display = 'none';
-      user.book({user:bookingData, details: detailsValue})
-    console.log(user)
+      user.book({user:bookingData, details: detailsValue, id:bookingData.bokedOn+detailsValue.title})
     alert('clicked')
   })
 }

@@ -20,7 +20,7 @@ function insertDetails(details){
                     <span class= "">share</span>
                     </div>
 
-                    <form action="#" class="bg-gray-300 transition-all ease-in-out duration-100 hidden  relative bottom-0 w-80   p-2 text-black group-active:flex flex-col justify-center
+                    <form action="#" class="bg-gray-300 transition-all ease-in-out duration-100 hidden  absolute top-30 w-80   p-2 text-black group-active:flex flex-col justify-center
                     items-center-safe gap-2">
                         <span class="closebtn position absolute transition ease-in duration-500 hover:scale-140 hover:cursor-pointer right-3 top-0 text-2xl text-red-400">x</span>
                         <h1 class=" font-bold text-center text-2xl">Book This Tour</h1>

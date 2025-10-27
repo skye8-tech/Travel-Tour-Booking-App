@@ -148,7 +148,7 @@ function book(){
       formElem.reset()
       formElem.style.display = 'none';
       user.book({user:bookingData, details: detailsValue, id:bookingData.bokedOn+detailsValue.title})
-    alert('clicked')
+    alert('Trip booked')
   })
 }
 

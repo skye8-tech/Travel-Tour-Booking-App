@@ -4,6 +4,14 @@ let data = JSON.parse(localStorage.getItem('bookedStuff'))
 
 // loading and adding trips from local Storage
 function addTrip({details,user,id}) {
+
+const cancelTrip = ()=>{
+  console.log("ran")
+  data = data?.filter(data=> data.id !=id)
+  user.booked = data
+  user.saveToStorage()
+}
+
   const container = document.getElementById("tripList"); // 👈 match your HTML
   let start = new Date(user.date)
   let date =user.bokedOn.split('/').reverse().join('-')
@@ -46,7 +54,7 @@ const tripCard = document.createElement("div");
       </div>
     </div>
     <div class="flex flex-col items-end space-y-2 mt-3 md:mt-0">
-      <button onclick="openCancelModal(this, ${cancelTrip(id)})" class="text-pink-500 hover:underline">Cancel Tour</button>
+      <button onclick="cancelTrip" class="text-pink-500 hover:underline">Cancel Tour</button>
       <button onclick="openRatingModal(this)" class="text-blue-600 hover:underline">Rate Tour</button>
       <div class="stars flex space-x-1 text-yellow-500 text-lg">
         <span>★</span><span>★</span><span>★</span><span>☆</span><span>☆</span>
@@ -55,12 +63,6 @@ const tripCard = document.createElement("div");
   `;
 
   container.appendChild(tripCard);
-}
-
-const cancelTrip = (id)=>{
-  data = data?.filter(data=> data.id !=id)
-  user.booked = data
-  user.saveToStorage()
 }
 
 // Loop through all tours

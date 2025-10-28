@@ -38,7 +38,7 @@
     <!-- Trip List -->
     <div id="tripList" class="space-y-4">
       <!-- Example Trip -->
-      <div class="trip flex flex-col md:flex-row md:items-center md:justify-between border rounded-lg shadow-sm p-4">
+  <div class="trip flex flex-col md:flex-row md:items-center md:justify-between border rounded-lg shadow-sm p-4">
         <img src="images/sample1.svg" alt="Trip" class="rounded-md w-full md:w-40 h-32 object-cover">
         <div class="flex-1 px-4 text-sm text-gray-600 mt-3 md:mt-0">
           <span class="px-2 py-1 bg-green-200 text-green-800 text-xs rounded">past</span>
@@ -61,7 +61,7 @@
             <span>★</span><span>★</span><span>★</span><span>☆</span><span>☆</span>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
   </section>
 
@@ -132,12 +132,16 @@
     // Cancel Tour
     function openCancelModal(button) {
       selectedTrip = button.closest(".trip");
+
       document.getElementById("cancelModal").classList.remove("hidden");
     }
     function closeCancelModal() {
       document.getElementById("cancelModal").classList.add("hidden");
       selectedTrip = null;
     }
+
+    
+
     function confirmCancel() {
       if (selectedTrip) selectedTrip.remove();
       closeCancelModal();
@@ -216,8 +220,7 @@
       closeAddModal();
     });
   </script>
-    <script src="./scripts/myTrips.js"></script>
+    <script type="module" src="./scripts/myTrips.js"></script>
     <script src="./scripts/main.js"></script>
-   <script src="./scripts/p.js"></script>
 </body>
 </html>

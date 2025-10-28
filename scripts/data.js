@@ -607,7 +607,6 @@ class Data{
   }
 
   filters({keyword, from, to,}){
-    console.log(keyword, Boolean(from), to)
     let filterd = []
     let key = []
     let locationfrom=[]
@@ -618,33 +617,26 @@ class Data{
         switch(e){
           case 'description':
             if (keyword && event[e].toLowerCase().includes(keyword.toLowerCase())){
-              console.log(e)
               key.push(event)
             }
             break
             case 'destination':
               if (keyword && event[e].toLowerCase().includes(keyword.toLowerCase())){
-                console.log(e, keyword)
                 key.push(event)
               }
               break
               case 'to':
                 if (to && event[e].toLowerCase().includes(to.toLowerCase())){
-              console.log(e)
               locationTo.push(event)
             }
-            // console.log(event[e].toLowerCase().includes(obj.to.toLowerCase()),event[e].toLowerCase(), )
             break
             case 'from':
               if (from && event[e].toLowerCase().includes(from.toLowerCase())){
-              console.log(e)
-                // key.push(event)
                 locationfrom.push(event)
             }
             break
           case 'includes':
             if(keyword && event[e].join(' ').toLowerCase().includes(keyword.toLowerCase())){
-
               key.push(event)
             }
             break

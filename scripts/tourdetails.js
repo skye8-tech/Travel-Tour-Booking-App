@@ -105,16 +105,17 @@ let detailsValue = JSON.parse(localStorage.getItem('detailvalue'))
 renderPage(detailsValue)
 function handleDropdown(){
     let formElem =  document.querySelector('form')
+    let btn =document.querySelector('.bookbtn')
              function popUp(){
                  formElem.style.display = 'grid'
+                 btn.style.display = 'none'
                }
-   
            function closeTour(){
                formElem.style.display = 'none'
+               btn.style.display = "flex"
            }
    
-           let btn =document.querySelector('.bookbtn')
-           btn.addEventListener('click', ()=>popUp())
+           btn.addEventListener('click', (e)=>popUp(e))
            document.querySelector('.closebtn').addEventListener('click',()=> closeTour())
 }
 // total price calculator

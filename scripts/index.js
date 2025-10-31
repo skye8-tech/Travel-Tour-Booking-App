@@ -269,10 +269,10 @@ let item = [
       hours: "",
     },
     images: [
-      "../images/dja/1.jpg",
-      "../images/dja/2.jpg",
-      "../images/dja/3.jpg",
-      "../images/dja/4.jpg",
+     "../images/dja/1.jpeg",
+      "../images/dja/2.jpeg",
+      "../images/dja/3.jpeg",
+      "../images/dja/4.jpeg",
     ],
   },
 ];
@@ -360,11 +360,11 @@ searchbtn.addEventListener("click", ()=>handleFilter())
 
 // function to render location cards
 function tourCards(Tour) {
-  const toursCard = document.getElementById("carousel");
-  
+  console.log(Tour);
+  let html = "";
   Tour.forEach((Tour) => {
-    let div = document.createElement("div")
-    div.innerHTML = `
+    console.log(Tour);
+    html += `
         <div
                             class="min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] bg-white rounded-xl shadow-md overflow-hidden mx-2">
                             <img class="h-48 w-full object-cover"
@@ -408,8 +408,9 @@ function tourCards(Tour) {
                         </div>
 
   `;
-  div.addEventListener('click', ()=>handleClick(Tour))
-  toursCard.appendChild(div)
+  const toursCard = document.getElementById("carousel");
+
+  toursCard.innerHTML = html;
   });
 }
 

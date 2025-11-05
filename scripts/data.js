@@ -563,42 +563,42 @@ let travels = [
         },
         images: ['../images/nsoboyz/0.jpeg', '../images/nsoboyz/1.jpeg', '../images/nsoboyz/2.jpeg', '../images/nsoboyz/3.jpeg', '../images/nsoboyz/4.jpeg']
     },
-      {
-    title: "General Express",
-    from: "Yaoundé",
-    to: "Douala",
-    description:
-      "Reliable intercity transport linking Cameroon’s busiest cities. General Express offers safe, comfortable, and timely journeys with professional drivers and modern buses.",
-    price: 12000,
-    ratings: {
-      starCount: 4.6,
-      reviews: 250,
-    },
-    duration: 1,
-    images: [
-      "../images/general/0.jpg",
-      "../images/general/1.jpg",
-      "../images/general/2.jpg",
-    ],
-  },
-  {
-    title: "Finexs Voyage",
-    from: "Douala",
-    to: "Bafoussam",
-    description:
-      "A trusted name in Cameroonian travel, Finexs Voyage ensures smooth trips with air-conditioned buses, onboard amenities, and excellent customer service.",
-    price: 10000,
-    ratings: {
-      starCount: 4.4,
-      reviews: 190,
-    },
-    duration: 1,
-    images: [
-      "../images/finexs/0.jpg",
-      "../images/finexs/1.jpg",
-      "../images/finexs/2.jpg",
-    ],
-  },
+  //     {
+  //   title: "General Express",
+  //   from: "Yaoundé",
+  //   to: "Douala",
+  //   description:
+  //     "Reliable intercity transport linking Cameroon’s busiest cities. General Express offers safe, comfortable, and timely journeys with professional drivers and modern buses.",
+  //   price: 12000,
+  //   ratings: {
+  //     starCount: 4.6,
+  //     reviews: 250,
+  //   },
+  //   duration: 1,
+  //   images: [
+  //     "../images/general/0.jpg",
+  //     "../images/general/1.jpg",
+  //     "../images/general/2.jpg",
+  //   ],
+  // },
+  // {
+  //   title: "Finexs Voyage",
+  //   from: "Douala",
+  //   to: "Bafoussam",
+  //   description:
+  //     "A trusted name in Cameroonian travel, Finexs Voyage ensures smooth trips with air-conditioned buses, onboard amenities, and excellent customer service.",
+  //   price: 10000,
+  //   ratings: {
+  //     starCount: 4.4,
+  //     reviews: 190,
+  //   },
+  //   duration: 1,
+  //   images: [
+  //     "../images/finexs/0.jpg",
+  //     "../images/finexs/1.jpg",
+  //     "../images/finexs/2.jpg",
+  //   ],
+  // },
 ]
 
 class Data{
